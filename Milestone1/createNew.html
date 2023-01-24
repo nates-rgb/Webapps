@@ -6,52 +6,61 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Giulio, Nate & Bryce's Project</title>
-	<style>
-        body{
+    <style>
+        .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+
+        .btni {
+            border: none;
+            cursor: pointer;
+            appearance: none;
+            background-color: inherit;
+        }
+
+        #btni {
+            border: none;
+            cursor: pointer;
+            appearance: none;
+            background-color: inherit;
+        }
+
+        #loginBox {
+            display: none;
+            background-color: inherit;
+            border-color: purple;
+            border-width: 3px;
+            border-style: solid;
+            width: 70%;
+            margin-left: 30%;
+            box-shadow: 5px 10px purple;
+        }
+
+        body {
             background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
-            background-repeat:no-repeat;
+            background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
         }
-		.ud{
-		border: none;
-        cursor: pointer;
-        appearance: none;
-        background-color: inherit;
-		}
-
-
-.flex-container {
-    display: flex;
-}
-
-.flex-child {
-    flex: 1;
-    border: 2px solid purple;
-}  
-
-.flex-child:first-child {
-    margin-right: 20px;
-} 
-
-.image
-{
-	border: 2px solid yellow;
-	width : 200px;
-	height : 100px;
-	display: inline-block;
-}
-
-    </style>
+        </style>
    
 </head>
 
 
 <body>
 
+    <div id='main_body'
+style="border-width:3px;border-style:solid;border-color:purple; text-align: center; width: 70%; margin-left: 17.5%; overflow-x:hidden; overflow-y:auto; background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');">
+ 
+    <header id = 'logo'>
 
 
-    <article>
+        <img src= "logo.png">
+
+
+    </header>
+      
         <h2>Schedule Your next Service</h2>
 
         <form action="index.html" method="POST">
@@ -74,11 +83,12 @@
 
 
 
-    </article>
+    
 
     <footer>
         &copy; Florida Institute of Technology
     </footer>
+</div>
 </body>
 
 </html>
