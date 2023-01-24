@@ -1,113 +1,127 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-	<meta charset="utf-8" />
-	<title>Giulio, Nate & Bryce's Project</title>
-	<style>
-        .center 
-        {
-        text-align: center;
-        border: 3px solid green;
-        }	
+    <meta charset="utf-8" />
+    <title>Giulio, Nate & Bryce's Project</title>
+    <style>
+        .center {
+            text-align: center;
+            border: 3px solid green;
+        }
+
         .btni {
-        border: none;
-        cursor: pointer;
-        appearance: none;
-        background-color: inherit;
+            border: none;
+            cursor: pointer;
+            appearance: none;
+            background-color: inherit;
         }
-        #btni{
-        border: none;
-        cursor: pointer;
-        appearance: none;
-        background-color: inherit;   
+
+        #btni {
+            border: none;
+            cursor: pointer;
+            appearance: none;
+            background-color: inherit;
         }
-        #loginBox{
+
+        #loginBox {
             display: none;
             background-color: inherit;
             border-color: purple;
-            border-width:3px;
-            border-style:solid;
+            border-width: 3px;
+            border-style: solid;
             width: 70%;
             margin-left: 30%;
             box-shadow: 5px 10px purple;
         }
 
-        body{
+        body {
             background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
-            background-repeat:no-repeat;
+            background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
         }
-
-
     </style>
-   
+
 </head>
+
 <body>
-	<div id = 'main_body' style ="border-width:3px;border-style:solid;border-color:purple; text-align: center; width: 70%; margin-left: 17.5%; overflow-x:hidden; overflow-y:auto; background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');">
-        <header id = 'logo'>
+    <div id='main_body'
+        style="border-width:3px;border-style:solid;border-color:purple; text-align: center; width: 70%; margin-left: 17.5%; overflow-x:hidden; overflow-y:auto; background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');">
+        <header id='logo'>
 
 
-            <img src= "LOGO.PNG">
-            <div id = 'login_button' style="margin-left:50%;">
-                <button type = 'button' id = "btnf" class = 'btni' onclick="openLogin()">
-                <img src = 'Login.png'>
+            <img src="logo.png">
+            <div id='login_button' style="margin-left:50%;">
+                <button type='button' id="btnf" class='btni' onclick="openLogin()">
+                    <img src='Login.png'>
                 </button>
-                <div id = 'loginBox'>
-                    <form action = "list.html" class = "formContainer">
-                        <h2 style = 'color:rgb(149, 0, 255)'><i>Log in and experience the magic!</i></h2>
-                        <label for = "uname">
-                            <img src = 'username.png'>
+                <div id='loginBox'>
+                    <form action="list.html" class="formContainer">
+                        <h2 style='color:rgb(149, 0, 255)'><i>Log in and experience the magic!</i></h2>
+                        <label for="uname">
+                            <img src='username.png'>
                         </label>
-                        <input type = "text" id = "uname" placeholder="Your Username" required>
-                        <label for = "pwd">
-                            <img src = 'password.png'>
+                        <input type="text" id="uname" placeholder="Your Username" required>
+                        <label for="pwd">
+                            <img src='password.png'>
                         </label>
-                        
-                        <input type = "password" id = "pwd" placeholder="Your Password" required>
-                        
+
+                        <input type="password" id="pwd" placeholder="Your Password" required>
+
                     </form>
                     <br>
-                    <button type = 'submit' class = 'btn' id = 'btni'> 
-                        <img src = 'Log In!.png'> 
+                    <button type='submit' class='btn' id='btni'>
+                        <img src='Log In!.png'>
                     </button>
                     <br>
-                    <a href = "https://www.fit.edu/"> Forgot your password?</a>
+                    <a href="https://www.fit.edu/"> Forgot your password?</a>
                     <br>
-                    <a href = "https://www.fit.edu/"> Sign up</a>
+                    <a href="https://www.fit.edu/"> Sign up</a>
                     <br>
-                    <button type = 'button' onclick="closeLogin()" id = 'btni'> 
-                        <img src = 'close.png'>
+                    <button type='button' onclick="closeLogin()" id='btni'>
+                        <img src='close.png'>
                     </button>
                 </div>
             </div>
 
 
         </header>
-        <div id = "gsn" style = "text-align: left;">
-            <hr style = "border-width:3px;border-style:solid;border-color:purple;">
-            <a href = "list.html"><img src = "MY TO DO LIST.png"></a><br><br><a href = "about.html"><img src ='ABOUT.png'></a> 
-            <hr style = "border-width:3px;border-style:solid;border-color:purple;">
-        </div>
-        <div id = 'content_body' style = "text-align:left; margin-left:2%; font-family:'Times New Roman', Times, serif;font-size: large;"">
-            <p style = "text-align:left;">At Horse Power, we provide the most luxurious automobiles and vehicles present on the market today, yours to rent <br>
-            or purchase. Be our guest at our Miami Southbeach showroom and select the car of your dreams; from Ferrari to Bugatti, to <br>
-            Porsche and Aston Martin. </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.710012840314!2d-80.13656987778663!3d25.78014023126352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b48d8f1810e1%3A0xa61686785530fe97!2s944%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1674440965177!5m2!1sen!2sus" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p>test</p>
-        </div>
+        <article>
+            <div id="gsn" style="text-align: left;">
+                <hr style="border-width:3px;border-style:solid;border-color:purple;">
+                <a href="list.html"><img src="MY TO DO LIST.png"></a><br><br><a href="about.html"><img
+                        src='ABOUT.png'></a>
+                <hr style="border-width:3px;border-style:solid;border-color:purple;">
+            </div>
+            <div id='content_body' style="text-align:left; margin-left:2%; font-family:'Times New Roman', Times, serif"">
+            <p style = " text-align:left;">At Horse Power, we provide the most luxurious automobiles and vehicles
+                present on the market today, yours to rent <br>
+                or purchase. Be our guest at our Miami Southbeach showroom and select the car of your dreams; from
+                Ferrari to Bugatti, to <br>
+                Porsche and Aston Martin. </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.710012840314!2d-80.13656987778663!3d25.78014023126352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b48d8f1810e1%3A0xa61686785530fe97!2s944%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1674440965177!5m2!1sen!2sus"
+                    width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+
+        </article>
         <footer>
             &copy; Florida Institute of Technology
         </footer>
     </div>
     <script>
         function openLogin() {
-          document.getElementById("loginBox").style.display = "block";
+            document.getElementById("loginBox").style.display = "block";
         }
         function closeLogin() {
-          document.getElementById("loginBox").style.display = "none";
+            document.getElementById("loginBox").style.display = "none";
         }
-      </script>
+    </script>
 </body>
+
 </html>
