@@ -45,6 +45,8 @@ display: inline-block;
     overflow-x: hidden; 
     overflow-y: auto; 
     background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 nav ul
