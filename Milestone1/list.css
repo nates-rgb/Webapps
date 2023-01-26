@@ -3,6 +3,7 @@ body{
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: rgb(255, 157, 248);
 }
 .ud{
 border: none;
@@ -31,4 +32,44 @@ border: 2px solid yellow;
 width : 200px;
 height : 100px;
 display: inline-block;
+}
+
+#main_body
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple; 
+    text-align: center; 
+    width: 70%; 
+    margin-left: 17.5%; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li
+{
+    float: left;
+}
+
+hr
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple;
+}
+
+#content_body
+{
+    text-align: left; 
+    margin-left: 2%; 
+    font-family:fantasy;
 }
