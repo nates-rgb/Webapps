@@ -75,3 +75,10 @@ hr
     margin-left: 2%; 
     font-family:fantasy;
 }
+
+.discription{
+    text-align: left;
+     font-family: 'Times New Roman', Times, serif; 
+     font-size: large;  
+     margin-left: 2%;
+}

@@ -75,3 +75,21 @@ hr
     border-style: solid;
     border-color:purple;
 }
+
+#content_body {
+    text-align:left; 
+    margin-left:2%; 
+    font-family:'Times New Roman', Times, serif;
+}
+
+.left {
+    text-align:left;
+}
+
+.color {
+    color:rgb(149, 0, 255);
+}
+
+.framed {
+    border:0;
+}
