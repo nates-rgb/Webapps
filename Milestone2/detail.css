@@ -1,0 +1,82 @@
+.center {
+    text-align: center;
+    border: 3px solid green;
+}
+
+.btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+#btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+#loginBox {
+    display: none;
+    background-color: inherit;
+    border-color: purple;
+    border-width: 3px;
+    border-style: solid;
+    width: 70%;
+    margin-left: 30%;
+    box-shadow: 5px 10px purple;
+}
+
+body {
+    background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#main_body
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple; 
+    text-align: center; 
+    width: 70%; 
+    margin-left: 17.5%; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav li
+{
+    float: left;
+}
+
+hr
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple;
+}
+
+.aboutUs img
+{
+    width: 15%;
+    float: left;
+    padding: 5%;
+}

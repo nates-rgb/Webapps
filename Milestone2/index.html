@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Giulio, Nate & Bryce's Project</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id = 'main_body'>
+        <header id='logo'>
+
+            <a href = "index.html"><img src= "logo.png" alt = "Logo"></a>
+
+            <div id='login_button'>
+                <button type='button' id="btnf" class='btni' onclick="openLogin()">
+                    <img src='Login.png'>
+                </button>
+                <div id='loginBox'>
+                    <form action="list.html" class="formContainer">
+                        <h2 class="color"><i>Log in and experience the magic!</i></h2>
+                        <label for="uname">
+                            <img src='username.png'>
+                        </label>
+                        <input type="text" id="uname" placeholder="Your Username" required>
+                        <label for="pwd">
+                            <img src='password.png'>
+                        </label>
+
+                        <input type="password" id="pwd" placeholder="Your Password" required>
+
+                    </form>
+                    <br>
+                    <button type='submit' class='btn' id='btni'>
+                        <img src='Log In!.png'>
+                    </button>
+                    <br>
+                    <a href="https://www.fit.edu/"> Forgot your password?</a>
+                    <br>
+                    <a href="https://www.fit.edu/"> Sign up</a>
+                    <br>
+                    <button type='button' onclick="closeLogin()" id='btni'>
+                        <img src='close.png'>
+                    </button>
+                </div>
+            </div>
+
+
+        </header>
+        <nav>
+            <hr>
+            <ul>
+                <li><a href="index.html"><img src="HOME.png"></a></li>
+                <li><a href = "buy.html"><img src = "buy.png"></a></li>
+                <li><a href = "rent.html"><img src = "rent.png"></a></li>
+                <li><a href="list.html"><img src="MY TO DO LIST.png"></a></li>
+                <li><a href="detail.html"><img src='ABOUT.png'></a></li>
+                <li><a href="createNew.html"><img src="FORMS.png"></a></li>
+            </ul>
+            <hr>
+        </nav>
+
+        <article>
+            <div class = "row">
+                <div class = "column">
+                    <div class = "buy">
+                        <img src = https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg alt = "Car Buy Page" class = "buyPageImage">
+                        <div class = "format">
+                            <div class = "buyText"><a href = "buy.html"><img src = "buylarge.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "column">
+                    <div class = "buy">
+                        <img src = https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg alt = "Car Buy Page" class = "buyPageImage">
+                        <div class = "format">
+                            <div class = "buyText"><a href = "rent.html"><img src = "rentlarge.png"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+        
+        <hr>
+
+        <footer>
+            &copy; Florida Institute of Technology
+        </footer>
+    </div>
+    
+</body>
+
+</html>
