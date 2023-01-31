@@ -127,12 +127,10 @@ hr
     -ms-transform: translate(-50%, -50%)
 }
 
-.buyText 
+.buyText img
 {
-    background-color: rgb(149, 0, 255);
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
+    width: 100%;
+    height: auto;
 }
 
 .buyText a:link
