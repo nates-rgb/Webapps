@@ -46,3 +46,17 @@ footer{
     text-align: center;
     color: purple;
 }
+#logo{
+    background-color: inherit;
+}
+#login_button
+{
+    background-color: inherit;
+    margin-left:50%;
+}
+.btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
