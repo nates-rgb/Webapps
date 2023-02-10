@@ -80,3 +80,10 @@ footer{
     text-align: center;
     color: purple;
 }
+
+.aboutUsHeader
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
