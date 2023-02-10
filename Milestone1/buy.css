@@ -57,8 +57,11 @@ footer{
     background-color: inherit;
 }
 
-.row
+.row:after
 {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .column
