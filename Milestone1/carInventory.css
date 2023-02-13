@@ -5,34 +5,6 @@ body{
     background-size: cover;
     background-color: rgb(255, 157, 248);
 }
-.ud{
-border: none;
-cursor: pointer;
-appearance: none;
-background-color: inherit;
-}
-
-
-.flex-container {
-display: flex;
-}
-
-.flex-child {
-flex: 1;
-border: 2px solid purple;
-}  
-
-.flex-child:first-child {
-margin-right: 20px;
-} 
-
-.image
-{
-border: 2px solid yellow;
-width : 200px;
-height : 100px;
-display: inline-block;
-}
 
 #main_body
 {
@@ -70,46 +42,3 @@ hr
     border-color:purple;
 }
 
-#content_body
-{
-    text-align: left; 
-    margin-left: 2%; 
-    font-family:fantasy;
-}
-
-.discription{
-    text-align: center;
-     font-family: 'Times New Roman', Times, serif; 
-     font-size: large;  
-     margin-left: 2%;
-}
-
-footer{
-    text-align: center;
-    color: purple;
-}
-#login_button
-{
-    margin-left:50%;
-}
-.btni {
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-}
-
-.purchaseHeader
-{
-    text-align: center;
-}
-
-.rentHeader
-{
-    text-align: center;
-}
-
-. button 
-{
-    text-align: center;
-}
