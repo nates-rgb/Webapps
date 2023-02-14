@@ -40,22 +40,42 @@
     </nav>
     
         <img src = "ScheduleService.png" alt = "Service Schedule Banner" class = "serviceBanner">
+       
+            <form action="index.html" method="POST">
+            <table class="center">
+               <tr>
+                    <td><label for="fname">First name:</label></td>
+                    <td><input type="text" id="fname" name="fname" value="John" class="full"></td>
+               </tr> 
+                
+                <tr>
+                        <td><label for="lname">Last name:</label></td>
+                        <td><input type="text" id="lname" name="lname" value="Doe" class="full"></td>
 
-        <form action="index.html" method="POST">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="fname" name="fname" value="John"><br>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="Doe"><br><br>
-            <label for="vin">Vin Number:</label>
-            <input type="text" id="vin" name="vin" value="ZA9SV25CXMD99019"><br><br>
-            <label for="lastService">Last Service:</label>
-            <input type="date" id="lastService" name="lastService"><br><br>
-            <label for="scheduleApp">New Appointment Time:</label>
-            <input type="date" id="scheduleApp" name="scheduleApp"><br><br>
-            
-            <input type="submit" value="Submit">
-        </form>
+                </tr>
+                
+                
+                
+                <tr>
+                        <td><label for="vin">Vin Number:</label></td>
+                        <td><input type="text" id="vin" name="vin" value="ZA9SV25CXMD99019" class="full"></td>
+                </tr>
+                
+               <tr>
+                        <td><label for="lastService">Last Service:</label></td>
+                        <td><input type="date" id="lastService" name="lastService" class="full"></td>
+               </tr> 
+               <tr>
+                        <td><label for="scheduleApp">New Appointment Time:</label></td>
+                        <td><input type="date" id="scheduleApp" name="scheduleApp" class="full"></td>
 
+
+               </tr> 
+            </table>
+                
+                <input type="submit" value="Submit">
+            </form>
+        
         <hr>
 
     <footer>
