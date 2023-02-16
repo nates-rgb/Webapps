@@ -74,11 +74,16 @@ hr
 
 footer{
     text-align: center;
-    color: purple;
+    color: #7DF9FF;
 }
 .btni {
     border: none;
     cursor: pointer;
     appearance: none;
     background-color: inherit;
+}
+label{
+    
+        color: #7DF9FF
+    
 }

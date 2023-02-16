@@ -79,12 +79,14 @@ hr
 
 footer{
     text-align: center;
-    color: purple;
+    color: #7DF9FF;
 }
-
 .aboutUsHeader
 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+p{
+    color: #7DF9FF;
 }

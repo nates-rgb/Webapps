@@ -81,13 +81,13 @@ hr
 .discription{
     text-align: center;
      font-family: 'Times New Roman', Times, serif; 
-     font-size: large;  
+     font-size: x-large;  
      margin-left: 2%;
+     color: #7DF9FF
 }
-
 footer{
     text-align: center;
-    color: purple;
+    color: #7DF9FF;
 }
 #login_button
 {

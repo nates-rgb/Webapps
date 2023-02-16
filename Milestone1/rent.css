@@ -42,10 +42,14 @@ hr
     border-style: solid;
     border-color:purple;
 }
+h2, h4, p {
+    color: #7DF9FF;
+    
+}
 
 footer{
     text-align: center;
-    color: purple;
+    color: #7DF9FF;
 }
 #logo{
     background-color: inherit;
