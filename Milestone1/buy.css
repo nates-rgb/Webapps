@@ -36,6 +36,11 @@ nav li
     padding-left: 20px;
 }
 
+h2, h4, p {
+    color: #FFFFFF;
+    
+}
+
 hr
 {
     border-width: 3px;
@@ -45,7 +50,7 @@ hr
 
 footer{
     text-align: center;
-    color: #7DF9FF;
+    color: #FFFFFF;
 }
 #login_button
 {

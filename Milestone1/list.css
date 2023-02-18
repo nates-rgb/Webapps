@@ -83,11 +83,11 @@ hr
      font-family: 'Times New Roman', Times, serif; 
      font-size: x-large;  
      margin-left: 2%;
-     color: #7DF9FF
+     color: #FFFFFF;
 }
 footer{
     text-align: center;
-    color: #7DF9FF;
+    color: #FFFFFF;
 }
 #login_button
 {
