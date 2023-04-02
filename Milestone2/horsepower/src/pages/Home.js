@@ -1,0 +1,71 @@
+import React from 'react'
+
+export function Home() {
+    return (
+        
+        <div id = 'main_body'>
+            <header id='logo'>
+    
+                <a href = "index.html"><img src= "logo.png" alt = "Logo"/></a>
+    
+                <div id='login_button'>
+                    <button type='button' id="btnf" class='btni' onclick="openLogin()">
+                        <img src='Login.png' alt = "login page button"/>
+                    </button>
+                    
+                </div>
+    
+    
+            </header>
+            <nav>
+                
+                <ul>
+                    <li><a href="index.html"><img src="HOME.png" alt = "home page button"/></a></li>
+                    <li><a href = "buy.html"><img src = "buy.png" alt = "buy page button"/></a></li>
+                    <li><a href = "rent.html"><img src = "rent.png" alt = "rent page button"/></a></li>
+                    <li><a href="list.html"><img src="my_saved_cars.png" alt = "todolist page button"/></a></li>
+                    <li><a href="detail.html"><img src='ABOUT.png' alt = "about page button"/></a></li>
+                    <li><a href="createNew.html"><img src="FORMS.png" alt = "contact us page button"/></a></li>
+                </ul>
+                
+            </nav>
+    
+            <article>
+                <div class = "row">
+                    <div class = "column">
+                        <div class = "buy">
+                            <a href = "buy.html"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></a>
+                            <div class = "format">
+                                <div class = "buyText"><a href = "buy.html"><img src = "buylarge.png" alt = "buy page"/></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "column">
+                        <div class = "buy">
+                            <a href = "rent.html"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></a>
+                            <div class = "format">
+                                <div class = "buyText"><a href = "rent.html"><img src = "rentlarge.png" alt = "rent page"/></a></div>
+                            
+                            </div>
+                        </div>
+                    </div>
+                   
+    
+                </div>
+                <p>Interested in testing out brand new supercars, fresh off the factory? <br/>
+                Ready to take them for a spin? Or are you willing to own one? <br/> 
+                If you are, then visit us at HorsePower, the most luxurious super and hyper car <br/>
+               dealership in South Beach Miami</p>
+    
+            </article>
+            
+            
+    
+            <footer>
+                &copy; Florida Institute of Technology
+            </footer>
+        </div>
+        
+   
+    )
+}

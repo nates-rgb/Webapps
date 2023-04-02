@@ -1,0 +1,110 @@
+body{
+    background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(255, 157, 248);
+}
+
+#main_body
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple; 
+    text-align: center; 
+    width: 70%; 
+    margin-left: 17.5%; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav li
+{
+    float: left;
+    padding-left: 20px;
+}
+
+hr
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple;
+}
+h2, h4, p {
+    color: #FFFFFF;
+    
+}
+
+footer{
+    text-align: center;
+    color: #FFFFFF;
+}
+#logo{
+    background-color: inherit;
+}
+#login_button
+{
+    background-color: inherit;
+    margin-left:50%;
+}
+.btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column
+{
+    float: left;
+    padding: 10px;
+}
+.left
+{
+    width: 25%;
+}
+.middle
+{
+    width: 55%;
+    text-align: left;
+}
+.right
+{
+    width: 20%;
+    text-align: center;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.rentPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}

@@ -1,0 +1,173 @@
+.center {
+    text-align: center;
+    border: 3px solid green;
+}
+
+.btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+#btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+#loginBox {
+    display: none;
+    background-color: inherit;
+    border-color: purple;
+    border-width: 3px;
+    border-style: solid;
+    width: 70%;
+    margin-left: 30%;
+    box-shadow: 5px 10px purple;
+}
+
+body {
+    background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#main_body
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple; 
+    text-align: center; 
+    width: 70%; 
+    margin-left: 17.5%;
+     
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#login_button
+{
+    margin-left:50%;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav li
+{
+    float: left;
+    padding-left: 20px;
+}
+
+hr
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple;
+}
+
+.left {
+    text-align:left;
+}
+
+.color {
+    color:rgb(149, 0, 255);
+}
+
+.framed {
+    border:0;
+}
+
+.buyPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}
+
+.buy
+{
+    position: relative;
+    width: 100%;
+}
+
+.buy:hover .buyPageImage 
+{
+    opacity: 0.3;
+}
+  
+.buy:hover .format 
+{
+    opacity: 1;
+}
+
+.format
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.buyText img
+{
+    width: 100%;
+    height: auto;
+}
+
+.buyText a:link
+{
+    text-decoration: none;
+}
+
+.buyText a:visited
+{
+    text-decoration: none;
+}
+
+.buyText a:hover
+{
+    text-decoration: none;
+}
+
+.buyText a:active
+{
+    text-decoration: none;
+}
+
+.row 
+{
+    display: flex;
+}
+
+.column 
+{
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    color: #FFFFFF;
+}
+p{
+    color: #FFFFFF;
+}
