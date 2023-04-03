@@ -41,11 +41,14 @@ h2, h4, p {
     
 }
 
-hr
+nav
 {
-    border-width: 3px;
+    border-width: 6px;
     border-style: solid;
     border-color:purple;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
 }
 .center {
     margin-left: auto;
@@ -59,6 +62,9 @@ hr
 footer{
     text-align: center;
     color: #FFFFFF;
+    border-top: 6px solid purple;
+    
+    
 }
 #login_button
 {

@@ -1,4 +1,15 @@
 import React from 'react'
+import logo from "../img/logo.png"
+import login from "../img/Login.png"
+import home from "../img/HOME.png"
+import buy from "../img/buy.png"
+import rent from "../img/rent.png"
+import my_saved_cars from "../img/my_saved_cars.png"
+import about from "../img/ABOUT.png"
+import forms from "../img/FORMS.png"
+import buy_large from "../img/buylarge.png"
+import rent_large from "../img/rentlarge.png"
+import {Link} from "react-router-dom"
 
 export function Home() {
     return (
@@ -6,26 +17,24 @@ export function Home() {
         <div id = 'main_body'>
             <header id='logo'>
     
-                <a href = "index.html"><img src= "logo.png" alt = "Logo"/></a>
+                <a href = "index.html"><img src= {logo} alt = "Logo"/></a>
     
                 <div id='login_button'>
-                    <button type='button' id="btnf" class='btni' onclick="openLogin()">
-                        <img src='Login.png' alt = "login page button"/>
-                    </button>
+                <Link to="/Login"><img src={login} alt = "login page button"/></Link>
                     
                 </div>
-    
+
     
             </header>
             <nav>
                 
                 <ul>
-                    <li><a href="index.html"><img src="HOME.png" alt = "home page button"/></a></li>
-                    <li><a href = "buy.html"><img src = "buy.png" alt = "buy page button"/></a></li>
-                    <li><a href = "rent.html"><img src = "rent.png" alt = "rent page button"/></a></li>
-                    <li><a href="list.html"><img src="my_saved_cars.png" alt = "todolist page button"/></a></li>
-                    <li><a href="detail.html"><img src='ABOUT.png' alt = "about page button"/></a></li>
-                    <li><a href="createNew.html"><img src="FORMS.png" alt = "contact us page button"/></a></li>
+                    <Link to="/"><li><img src={home} alt = "home page button"/></li></Link>
+                    <Link to="/Buy"><li><img src = {buy} alt = "buy page button"/></li></Link>
+                    <Link to="/Rent"><li><img src = {rent} alt = "rent page button"/></li></Link>
+                    <Link to="/My_Saved_cars"><li><img src={my_saved_cars} alt = "todolist page button"/></li></Link>
+                    <Link to="/About"><li><img src={about} alt = "about page button"/></li></Link>
+                    <Link to="/Contact"><li><img src={forms} alt = "contact us page button"/></li></Link>
                 </ul>
                 
             </nav>
@@ -34,17 +43,17 @@ export function Home() {
                 <div class = "row">
                     <div class = "column">
                         <div class = "buy">
-                            <a href = "buy.html"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></a>
+                            <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></Link>
                             <div class = "format">
-                                <div class = "buyText"><a href = "buy.html"><img src = "buylarge.png" alt = "buy page"/></a></div>
+                                <div class = "buyText"><a href = "buy.html"><img src = {buy_large} alt = "buy page"/></a></div>
                             </div>
                         </div>
                     </div>
                     <div class = "column">
                         <div class = "buy">
-                            <a href = "rent.html"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></a>
+                            <Link to="/Rent"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></Link>
                             <div class = "format">
-                                <div class = "buyText"><a href = "rent.html"><img src = "rentlarge.png" alt = "rent page"/></a></div>
+                                <div class = "buyText"><a href = "rent.html"><img src = {rent_large} alt = "rent page"/></a></div>
                             
                             </div>
                         </div>
