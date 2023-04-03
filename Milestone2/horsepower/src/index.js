@@ -1,17 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-// import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import {App} from './App';
+import { BrowserRouter, Route ,Link, Routes} from "react-router-dom";
+import {Contact} from "./pages/Contact";
+import {Buy} from "./pages/Buy"
+import {Rent} from "./pages/Rent"
+import {MySavedCars} from "./pages/Saved_Cars"
+import {About} from "./pages/About"
+import {Login} from "./pages/Login"
+import {NewAccount} from "./pages/NewAccount"
+import "./App.css"
+ReactDOM.render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/Buy" element={<Buy />} />
+      <Route path="/Rent" element={<Rent />} />
+      <Route path="/My_Saved_Cars" element={<MySavedCars />} />
+      <Route path="/About" element={<About />} />
+      <Route path="/Login" element={<Login />}/>
+      <Route path="/NewAccount" element={<NewAccount />}/>
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    </Routes>
+    </BrowserRouter>,
+ 
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
