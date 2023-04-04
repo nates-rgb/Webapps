@@ -282,6 +282,7 @@ p{
     text-align: center;
 }
 
+
 .button 
 {
     text-align: center;
@@ -300,4 +301,8 @@ p{
 .btn {
     background-color: inherit;
     border-width: 0px;
+}
+
+.wrapper {
+    margin:20px;
 }
