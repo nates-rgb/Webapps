@@ -19,7 +19,7 @@ export function MySavedCars() {
         <div id = 'main_body'>
             <header id='logo'>
     
-                <a href = "index.html"><img src= {logo} alt = "Logo"/></a>
+                <Link to="/"><img src= {logo} alt = "Logo"/></Link>
     
                 <div id='login_button'>
                     
