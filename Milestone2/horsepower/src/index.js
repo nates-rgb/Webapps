@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {App} from './App';
-import { BrowserRouter, Route ,Link, Routes} from "react-router-dom";
+import { BrowserRouter, Route , Routes} from "react-router-dom";
 import {Contact} from "./pages/Contact";
 import {Buy} from "./pages/Buy"
 import {Rent} from "./pages/Rent"

@@ -25,7 +25,7 @@ export function Buy() {
                     </div>
                     <div class = "column right">
                         <h2>Price</h2>
-                        <img src = {buy_larger} alt ="buy now image"/>
+                        <img src = {buy_larger} alt ="buy now image1"/>
                     </div>
                 </div>
                
@@ -43,7 +43,7 @@ export function Buy() {
                     </div>
                     <div class = "column right">
                         <h2>Price</h2>
-                        <img src = {buy_larger} alt ="buy now image"/>
+                        <img src = {buy_larger} alt ="buy now image3"/>
                     </div>
                 </div>
                 
