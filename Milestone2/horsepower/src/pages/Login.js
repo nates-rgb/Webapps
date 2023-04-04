@@ -9,7 +9,7 @@ import about from "../img/ABOUT.png"
 import forms from "../img/FORMS.png"
 import user from "../img/username.png"
 import pass from "../img/password.png"
-import log from "../img/LogIn.png"
+import log from "../img/Log.png"
 import {Link} from "react-router-dom"
 
 export function Login() {
