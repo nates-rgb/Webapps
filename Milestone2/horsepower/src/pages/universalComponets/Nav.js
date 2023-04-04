@@ -6,7 +6,7 @@ import my_saved_cars from "../../img/my_saved_cars.png"
 import about from "../../img/ABOUT.png"
 import forms from "../../img/FORMS.png"
 import {Link} from "react-router-dom"
-
+//nav
 export function Nav() {
     return (
 
@@ -26,3 +26,4 @@ export function Nav() {
         </div>
     )
 }
+
