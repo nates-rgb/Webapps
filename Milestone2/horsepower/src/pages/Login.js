@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import user from "../img/username.png"
 import pass from "../img/password.png"
 import log from "../img/Log.png"
@@ -6,10 +6,28 @@ import {Link} from "react-router-dom"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
+import {auth, provider} from "../firebase"
+import {signInWithPopup} from "firebase/auth"
+import {Home} from "./Home"
+import { Navigate } from "react-router-dom";
+
 export function Login() {
+    const [value, setValue ] = useState('')
+    const handleClick = ()=>{
+        signInWithPopup(auth, provider).then((data)=>{
+            setValue(data.user.email)
+            localStorage.setItem('email',data.user.email)
+        })
+    }
+    useEffect(()=>{
+        setValue(localStorage.getItem('email'))
+    })
+
     return (
 
-        <div id = 'main_body'>
+        <div>
+            {value?<Navigate replace to ="/" />:
+            <div id = 'main_body'>
             <Header />
             <Nav />
 
@@ -24,9 +42,10 @@ export function Login() {
 
             
             <br/>
-            <button type='submit' class='btn' id='btni'>
+            <button type="submit" class='btn' id='btni'>
                 <img src={log} alt="login"/> 
             </button>
+            <button onClick = {handleClick}>Login with Google</button>
         </form>
             <br/>
             <a href="https://www.fit.edu/"> Forgot your password?</a>
@@ -40,8 +59,12 @@ export function Login() {
 
         <Footer /> 
     </div>
+            }
+        </div>
+
+        
 
                     
    
-    )
+    );
 }
