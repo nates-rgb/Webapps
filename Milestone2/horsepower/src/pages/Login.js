@@ -7,15 +7,30 @@ import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {auth, provider} from "../firebase"
-import {signInWithPopup, onAuthStateChanged } from "firebase/auth"
+import {signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
 import {Home} from "./Home"
 import { Navigate } from "react-router-dom";
 import {LogOut} from "./universalComponets/Sign_Out"
-import { useAuthState } from '../react-firebase-hooks/auth';
+
 export function Login() {
+    
+    
+    const [loginEmail, setLoginEmail] = useState("")
+    const [loginPassword, setLoginPassword] = useState("")
+    const simpleLogin = async () => {
+        try{
+          const user = await signInWithEmailAndPassword(
+            auth,
+            loginEmail,
+            loginPassword
+          );
+          console.log(user)
+        }catch(error){
+          console.log(error.message)
+        }
+      }
     const [value, setValue ] = useState('')
     const [curUser, setCurUser] = useState({})
-    const [user, loading, error] = useAuthState(auth);
     const handleClick = async ()=>{
         console.log("state")
         try {
@@ -42,21 +57,24 @@ export function Login() {
             <Nav />
             <article>
                 <h1>this is current user: {curUser?.email}</h1>
-                <form action="index.html" class="formContainer">
+                
                     <h2 class="color"><i>Log in and experience the magic!</i></h2>
                     <label for="uname"><img src={user} alt="username"/></label>
-                    <input type="text" id="uname" placeholder="Your Username" required/><br/><br/>
-                    <label for="pwd"><img src={pass} alt="password"/></label>
+                    <input type="text" id="uname" placeholder="Your Username" required onChange={(event) => {
+                    setLoginEmail(event.target.value) }}/><br/><br/>
+                    <label for="pwd"><img src={pass} alt="password" /></label>
     
-                    <input type="password" id="pwd" placeholder="Your Password" required/><br/><br/>
+                    <input type="password" id="pwd" placeholder="Your Password" required onChange={(event) => {
+                    setLoginPassword(event.target.value)
+                }}/><br/><br/>
     
                 
                 <br/>
-                <button type="submit" class='btn' id='btni'>
+                <button onClick={simpleLogin} class='btn' id='btni'>
                     <img src={log} alt="login"/> 
                 </button>
                 <button onClick = {handleClick}>Login with Google</button>
-            </form>
+            
                 <br/>
                 <a href="https://www.fit.edu/"> Forgot your password?</a>
                 <br/>
