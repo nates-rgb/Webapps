@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import buy_large from "../img/buylarge.png"
 import rent_large from "../img/rentlarge.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {Link} from "react-router-dom"
+import { onAuthStateChanged} from "firebase/auth"
+import {auth, provider} from "../firebase"
+import {LogOut} from "./universalComponets/Sign_Out"
 export function Home() {
+
+    const [curUser, setCurUser] = useState({})
+    
+
+    onAuthStateChanged(auth, (currentUser) => {
+        setCurUser(currentUser)
+    })
+
     return (
 
         <div id = 'main_body'>
             <Header />
             <Nav />
-    
+            <LogOut />
+            <h1>Current user is: {curUser?.email}</h1>
+            {console.log(typeof (curUser))}
             <article>
-                <div class = "row">
+                
+                    <div class = "row">
                     <div class = "column">
                         <div class = "buy">
                             <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></Link>
