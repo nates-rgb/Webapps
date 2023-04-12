@@ -306,3 +306,9 @@ p{
 .wrapper {
     margin:20px;
 }
+
+.button
+{
+    background-color: transparent;
+    border: none;
+}
