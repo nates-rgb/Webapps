@@ -7,15 +7,15 @@ import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {auth, provider} from "../firebase"
-import {signInWithPopup, onAuthStateChanged} from "firebase/auth"
+import {signInWithPopup, onAuthStateChanged } from "firebase/auth"
 import {Home} from "./Home"
 import { Navigate } from "react-router-dom";
 import {LogOut} from "./universalComponets/Sign_Out"
-
-
+import { useAuthState } from '../react-firebase-hooks/auth';
 export function Login() {
     const [value, setValue ] = useState('')
     const [curUser, setCurUser] = useState({})
+    const [user, loading, error] = useAuthState(auth);
     const handleClick = async ()=>{
         console.log("state")
         try {
@@ -33,7 +33,7 @@ export function Login() {
     console.log(Object.is(curUser, null))
     console.log("i ran")
     //console.log(curUser.email)
-    if( 1 )
+    if( user )
     {
         return (<div>
             
