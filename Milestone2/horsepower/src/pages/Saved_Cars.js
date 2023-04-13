@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import yourPurchases from "../img/yourPurchases.png"
 import yourRentals from "../img/yourRentals.png"
@@ -7,35 +7,165 @@ import del from "../img/delete.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-export function MySavedCars() {
-    return (
+import {carInventory} from './dB'
 
+
+export function MySavedCars() {
+    //Car 1
+    const [buy1, buyStatus1] = useState(() => {
+        const storedBuyStatus1 = localStorage.getItem('buy1');
+        return storedBuyStatus1 !== null ? Number(storedBuyStatus1) : 0;
+    });
+    const handleClick1 = () => buyStatus1(buy1 + 1)
+    const resetClick1 = () => buyStatus1(0)
+
+    useEffect(() => {localStorage.setItem('buy1',buy1.toString());}, [buy1]);
+
+    if(buy1 > 0)
+    {
+        carInventory[0].boughtStatus = 'true'
+    }
+    else
+    {
+        carInventory[0].boughtStatus = 'false'
+    }
+
+    //Car 2
+    const [buy2, buyStatus2] = useState(() => {
+        const storedBuyStatus2 = localStorage.getItem('buy2');
+        return storedBuyStatus2 !== null ? Number(storedBuyStatus2) : 0;
+    });
+    const handleClick2 = () => buyStatus2(buy2 + 1)
+    const resetClick2 = () => buyStatus2(0)
+
+    useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
+
+    if(buy2 > 0)
+    {
+        carInventory[1].boughtStatus = 'true'
+    }
+    else
+    {
+        carInventory[1].boughtStatus = 'false'
+    }
+
+    //Car 1
+    const [rent1, rentStatus1] = useState(() => {
+        const storedRentStatus1 = localStorage.getItem('rent1');
+        return storedRentStatus1 !== null ? Number(storedRentStatus1) : 0;
+    });
+    const handleClickR1 = () => rentStatus1(rent1 + 1)
+    const resetClickR1 = () => rentStatus1(0)
+
+    useEffect(() => {localStorage.setItem('rent1',rent1.toString());}, [rent1]);
+
+    if(rent1 > 0)
+    {
+        carInventory[2].boughtStatus = 'true'
+    }
+    else
+    {
+        carInventory[2].boughtStatus = 'false'
+    }
+
+    //Car 2
+    const [rent2, rentStatus2] = useState(() => {
+        const storedRentStatus2 = localStorage.getItem('rent2');
+        return storedRentStatus2 !== null ? Number(storedRentStatus2) : 0;
+    });
+    const handleClickR2 = () => rentStatus2(rent2 + 1)
+    const resetClickR2 = () => rentStatus2(0)
+
+    useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);
+
+    if(rent2 > 0)
+    {
+        carInventory[3].boughtStatus = 'true'
+    }
+    else
+    {
+        carInventory[3].boughtStatus = 'false'
+    }
+
+
+    return(
+            
         <div id = 'main_body'>
             <Header />
             <Nav />
+
             <div class = "wrapper">
                 <div id = 'content_body' class = "flex-container">
                     <div id = 'purchases' class = 'flex-child purchases'>
                         <div class = "purchaseHeader"><img src = {yourPurchases} alt = "your purchases header"/></div>
-                        <img src = 'https://cdn-ds.com/blogs-media/sites/492/2017/09/06091521/2014-Ferrari-LaFerrari-Coupe-For-Sale-Miami-FL_d-1038x375.jpg' class = 'image' alt = "your car image1"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
-                        <br/>
-                        <img src = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Veyron_SS.jpg' class = 'image' alt = "your car image5"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
-                        <br/>
-                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/2023-porsche-911-gt3-rs-201-1660575621.jpg?crop=0.755xw:0.567xh;0.0833xw,0.257xh&resize=1200:*' class = 'image' alt = "your car image2"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
+                        {(() => { if (carInventory[0].boughtStatus === 'true') { 
+                            return (
+                                <div class = "row">
+                                    <div class = "column buyA">
+                                        <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg' class = 'buyPageImage' alt = "your car image1"/>
+                                    </div>
+                                    <div class = "column buyB">
+                                        <h2>{carInventory[0].name}</h2>
+                                        <button type = 'button' class = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
+                                    </div>
+                                </div>
+                            );}
+                        else {
+                            return null;
+                        }
+                        })()}
+                        {(() => { if (carInventory[1].boughtStatus === 'true') { 
+                            return (
+                                <div class = "row">
+                                    <div class = "column buyA">
+                                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*' class = 'buyPageImage' alt = "your car image1"/>
+                                    </div>
+                                    <div class = "column buyB">
+                                        <h2>{carInventory[1].name}</h2>
+                                        <button type = 'button' class = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
+                                    </div>
+                                </div>
+                            );}
+                        else {
+                            return null;
+                        }
+                        })()}
                     </div>
+                    
                     <div id = 'rentals' class = 'flex-child rentals' >
                         <div class = "rentHeader"><img src = {yourRentals} alt = "your rentals header"/></div>
-                        <img src = 'https://mysterio.yahoo.com/mysterio/api/D8A14E92040B4641D8EBE4765441CA2B256D658AC544EEDDD55B442C941BE372/autoblog/resizefill_w1200_h720;quality_85;format_webp;cc_31536000;/https://o.aolcdn.com/images/dims3/GLOB/legacy_thumbnail/800x450/format/jpg/quality/85/http://www.blogcdn.com/www.autoblog.com/media/2008/09/lp640_abg_06_opt.jpg' class = 'image' alt = "your car image3"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
-                        <br/>
-                        <img src = 'http://cdn.carbuzz.com/gallery-images/1600/702000/700/702768.jpg' class = 'image' alt = "your car image3"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
-                        <br/>
-                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/1981-deloreanscreen-shot-2022-05-21-at-8-16-00-am-1653135783.png' class = 'image' alt = "your car image6"/>
-                        <button type = 'button' class = 'ud'> <img src = {update} alt = "update tab"/> </button> <button type = 'button' class = 'ud'> <img src={del} alt = "delete button"/></button>
+                        {(() => { if (carInventory[2].boughtStatus === 'true') { 
+                            return (
+                                <div class = "row">
+                                    <div class = "column buyA">
+                                        <img src = 'https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg' class = 'buyPageImage' alt = "your car image1"/>
+                                    </div>
+                                    <div class = "column buyB">
+                                        <h2>{carInventory[2].name}</h2>
+                                        <button type = 'button' class = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
+                                    </div>
+                                </div>
+                            );}
+                        else {
+                            return null;
+                        }
+                        })()}
+                        {(() => { if (carInventory[3].boughtStatus === 'true') { 
+                            return (
+                                <div class = "row">
+                                    <div class = "column buyA">
+                                        <img src = 'https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg' class = 'buyPageImage' alt = "your car image1"/>
+                                    </div>
+                                    <div class = "column buyB">
+                                        <h2>{carInventory[3].name}</h2>
+                                        <button type = 'button' class = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
+                                    </div>
+                                </div>
+                            );}
+                        else {
+                            return null;
+                        }
+                        })()}
                     </div>
                 </div>
             </div>
