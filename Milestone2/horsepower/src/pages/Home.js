@@ -16,7 +16,7 @@ export function Home() {
                 <div class = "row">
                     <div class = "column">
                         <div class = "buy">
-                            <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></Link>
+                            <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
                             <div class = "format">
                                 <div class = "buyText"><img src = {buy_large} alt = "buy page"/></div>
                             </div>
@@ -24,7 +24,7 @@ export function Home() {
                     </div>
                     <div class = "column">
                         <div class = "buy">
-                            <Link to="/Rent"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "buyPageImage"/></Link>
+                            <Link to="/Rent"><img src = "https://www.autoguide.com/blog/wp-content/gallery/lamborghini-road-trip/Lamborghini-Transfagarasan-Trip-4.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
                             <div class = "format">
                                 <div class = "buyText"><img src = {rent_large} alt = "rent page"/></div>
                             
