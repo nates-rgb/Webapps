@@ -110,12 +110,24 @@ footer{
 {
     opacity: 1;
     display: block;
-    width: 100%;
+    width: 245px;
     height: auto;
     transition: 0.5s ease;
     backface-visibility: hidden;
     border: 5px solid purple;
 }
+
+.homePageImage
+{
+    opacity: 1;
+    display: block;
+    width: 500px;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}
+
 label{
     
     color: #FFFFFF;
@@ -151,17 +163,6 @@ p{
 
 .framed {
     border:0;
-}
-
-.buyPageImage
-{
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: 0.5s ease;
-    backface-visibility: hidden;
-    border: 5px solid purple;
 }
 
 .buy
@@ -311,4 +312,16 @@ p{
 {
     background-color: transparent;
     border: none;
+}
+
+.buyA
+{
+    text-align: center;
+    width: 50%;
+}
+
+.buyB
+{
+    text-align: center;
+    width: 50%;
 }
