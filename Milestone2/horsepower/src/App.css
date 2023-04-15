@@ -126,6 +126,7 @@ footer{
     transition: 0.5s ease;
     backface-visibility: hidden;
     border: 5px solid purple;
+    margin-left: 25%;
 }
 
 label{
@@ -227,6 +228,13 @@ p{
 {
     padding: 10px;
 }
+
+.columnHomePage 
+{
+    padding: 10px;
+    width: 50%;
+}
+
 
 
 
