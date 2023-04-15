@@ -13,6 +13,7 @@ export function Home() {
             <Nav />
     
             <article>
+<<<<<<< HEAD
                 <div className = "row">
                     <div className = "column">
                         <div className = "buy">
@@ -27,6 +28,22 @@ export function Home() {
                             <Link to="/Rent"><img src = "https://www.autoguide.com/blog/wp-content/gallery/lamborghini-road-trip/Lamborghini-Transfagarasan-Trip-4.jpg" alt = "Car Buy Page" className = "homePageImage"/></Link>
                             <div className = "format">
                                 <div className = "buyText"><img src = {rent_large} alt = "rent page"/></div>
+=======
+                <div class = "row">
+                    <div class = "columnHomePage">
+                        <div class = "buy">
+                            <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
+                            <div class = "format">
+                                <div class = "buyText"><img src = {buy_large} alt = "buy page"/></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "columnHomePage">
+                        <div class = "buy">
+                            <Link to="/Rent"><img src = "https://www.autoguide.com/blog/wp-content/gallery/lamborghini-road-trip/Lamborghini-Transfagarasan-Trip-4.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
+                            <div class = "format">
+                                <div class = "buyText"><img src = {rent_large} alt = "rent page"/></div>
+>>>>>>> 962d9f541a070d75550d193fdd5853d02081d860
                             
                             </div>
                         </div>
