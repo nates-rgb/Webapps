@@ -94,19 +94,19 @@ export function MySavedCars() {
             <Header />
             <Nav />
 
-            <div class = "wrapper">
-                <div id = 'content_body' class = "flex-container">
-                    <div id = 'purchases' class = 'flex-child purchases'>
-                        <div class = "purchaseHeader"><img src = {yourPurchases} alt = "your purchases header"/></div>
+            <div className = "wrapper">
+                <div id = 'content_body' className = "flex-container">
+                    <div id = 'purchases' className = 'flex-child purchases'>
+                        <div className = "purchaseHeader"><img src = {yourPurchases} alt = "your purchases header"/></div>
                         {(() => { if (carInventory[0].boughtStatus === 'true') { 
                             return (
-                                <div class = "row">
-                                    <div class = "column buyA">
-                                        <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg' class = 'buyPageImage' alt = "your car image1"/>
+                                <div className = "row">
+                                    <div className = "column buyA">
+                                        <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg' className = 'buyPageImage' alt = "your car image1"/>
                                     </div>
-                                    <div class = "column buyB">
+                                    <div className = "column buyB">
                                         <h2>{carInventory[0].name}</h2>
-                                        <button type = 'button' class = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
+                                        <button type = 'button' className = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
                                     </div>
                                 </div>
                             );}
@@ -116,13 +116,13 @@ export function MySavedCars() {
                         })()}
                         {(() => { if (carInventory[1].boughtStatus === 'true') { 
                             return (
-                                <div class = "row">
-                                    <div class = "column buyA">
-                                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*' class = 'buyPageImage' alt = "your car image1"/>
+                                <div className = "row">
+                                    <div className = "column buyA">
+                                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*' className = 'buyPageImage' alt = "your car image1"/>
                                     </div>
-                                    <div class = "column buyB">
+                                    <div className = "column buyB">
                                         <h2>{carInventory[1].name}</h2>
-                                        <button type = 'button' class = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
+                                        <button type = 'button' className = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
                                     </div>
                                 </div>
                             );}
@@ -132,17 +132,17 @@ export function MySavedCars() {
                         })()}
                     </div>
                     
-                    <div id = 'rentals' class = 'flex-child rentals' >
-                        <div class = "rentHeader"><img src = {yourRentals} alt = "your rentals header"/></div>
+                    <div id = 'rentals' className = 'flex-child rentals' >
+                        <div className = "rentHeader"><img src = {yourRentals} alt = "your rentals header"/></div>
                         {(() => { if (carInventory[2].boughtStatus === 'true') { 
                             return (
-                                <div class = "row">
-                                    <div class = "column buyA">
-                                        <img src = 'https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg' class = 'buyPageImage' alt = "your car image1"/>
+                                <div className = "row">
+                                    <div className = "column buyA">
+                                        <img src = 'https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg' className = 'buyPageImage' alt = "your car image1"/>
                                     </div>
-                                    <div class = "column buyB">
+                                    <div className = "column buyB">
                                         <h2>{carInventory[2].name}</h2>
-                                        <button type = 'button' class = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
+                                        <button type = 'button' className = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
                                     </div>
                                 </div>
                             );}
@@ -152,13 +152,13 @@ export function MySavedCars() {
                         })()}
                         {(() => { if (carInventory[3].boughtStatus === 'true') { 
                             return (
-                                <div class = "row">
-                                    <div class = "column buyA">
-                                        <img src = 'https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg' class = 'buyPageImage' alt = "your car image1"/>
+                                <div className = "row">
+                                    <div className = "column buyA">
+                                        <img src = 'https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg' className = 'buyPageImage' alt = "your car image1"/>
                                     </div>
-                                    <div class = "column buyB">
+                                    <div className = "column buyB">
                                         <h2>{carInventory[3].name}</h2>
-                                        <button type = 'button' class = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
+                                        <button type = 'button' className = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
                                     </div>
                                 </div>
                             );}
@@ -169,7 +169,7 @@ export function MySavedCars() {
                     </div>
                 </div>
             </div>
-		<p class="discription">
+		<p className="discription">
 			In your personal page, you can view your most recent purchases, awaiting to be delivered. You have <br/>
 			the choice to update your personal information, vehicle specification or shipping address. In the <br/>
 			'Your Rentals' section, view your upcoming rentals, and update the where, when and how of your Horse Power <br/>

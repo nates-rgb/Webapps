@@ -10,42 +10,44 @@ export function Contact() {
             <Header />
             <Nav />
     
-        <img src = {schedule} alt = "Service Schedule Banner" class = "serviceBanner"/>
+        <img src = {schedule} alt = "Service Schedule Banner" className = "serviceBanner"/>
        
-            <form action="index.html" method="POST">
-            <table class="center">
+        <form action="" method="POST">
+            <table className="center">
+                <tbody>
                <tr>
-                    <td><label for="fname">First name:</label></td>
-                    <td><input type="text" id="fname" name="fname" placeholder="John" class="full"/></td>
+                    <td><label htmlFor="fname">First name:</label></td>
+                    <td><input type="text" id="fname" name="fname" placeholder="John" className="full"/></td>
                </tr> 
                 
                 <tr>
-                        <td><label for="lname">Last name:</label></td>
-                        <td><input type="text" id="lname" name="lname" placeholder="Doe" class="full"/></td>
+                        <td><label htmlFor="lname">Last name:</label></td>
+                        <td><input type="text" id="lname" name="lname" placeholder="Doe" className="full"/></td>
 
                 </tr>
                 
                 
                 
                 <tr>
-                        <td><label for="vin">Vin Number:</label></td>
-                        <td><input type="text" id="vin" name="vin" placeholder="ZA9SV25CXMD99019" class="full"/></td>
+                        <td><label htmlFor="vin">Vin Number:</label></td>
+                        <td><input type="text" id="vin" name="vin" placeholder="ZA9SV25CXMD99019" className="full"/></td>
                 </tr>
                 
                <tr>
-                        <td><label for="lastService">Last Service:</label></td>
-                        <td><input type="date" id="lastService" name="lastService" class="full"/></td>
+                        <td><label htmlFor="lastService">Last Service:</label></td>
+                        <td><input type="date" id="lastService" name="lastService" className="full"/></td>
                </tr> 
                <tr>
-                        <td><label for="scheduleApp">New Appointment Time:</label></td>
-                        <td><input type="date" id="scheduleApp" name="scheduleApp" class="full"/></td>
+                        <td><label htmlFor="scheduleApp">New Appointment Time:</label></td>
+                        <td><input type="date" id="scheduleApp" name="scheduleApp" className="full"/></td>
 
 
                </tr> 
                <tr>
-                        <td><label for = 'message'>Send us a message!</label></td>
-                        <td><textarea id="message" placeholder="What can we do for you?"></textarea></td>
+                        <td><label htmlFor = 'message'>Send us a message!</label></td>
+                        <td><textarea id="message" placeholder="What can we do htmlFor you?"></textarea></td>
                </tr>
+               </tbody>
             </table>
                 
                 <input type="submit" value="Submit"/>

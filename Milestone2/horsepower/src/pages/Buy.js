@@ -40,36 +40,36 @@ export function Buy() {
             <Header />
             <Nav />
         <article>
-            <div class = "item1">
-                <div class = "row">
-                    <div class = "column left">
-                        <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" class = "buyPageImage"/>
+            <div className = "item1">
+                <div className = "row">
+                    <div className = "column left">
+                        <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "buyPageImage"/>
                     </div>
-                    <div class = "column middle">
+                    <div className = "column middle">
                         <h2>{carInventory[0].name}</h2>
                         <h4>Brand: {carInventory[0].brand} &nbsp; Model: {carInventory[0].model} &nbsp; Color: {carInventory[0].color}</h4>
                         <p>{carInventory[0].description}</p>
                     </div>
-                    <div class = "column right">
+                    <div className = "column right">
                         <h2>${carInventory[0].price}</h2>
-                        <button class = "button" onClick = {handleClick1}><img src = {buy_larger} alt ="buy now image1"/></button>
+                        <button className = "button" onClick = {handleClick1}><img src = {buy_larger} alt ="buy now image1"/></button>
                     </div>
                 </div>
             </div>
             <br/>
-            <div class = "item2">
-                <div class = "row">
-                    <div class = "column left">
-                        <img src = "https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*" alt = "Car Buy Page" class = "buyPageImage"/>
+            <div className = "item2">
+                <div className = "row">
+                    <div className = "column left">
+                        <img src = "https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*" alt = "Car Buy Page" className = "buyPageImage"/>
                     </div>
-                    <div class = "column middle">
+                    <div className = "column middle">
                         <h2>{carInventory[1].name}</h2>
                         <h4>Brand: {carInventory[1].brand} &nbsp; Model: {carInventory[1].model} &nbsp; Color: {carInventory[1].color}</h4>
                         <p>{carInventory[1].description}</p>
                     </div>
-                    <div class = "column right">
+                    <div className = "column right">
                         <h2>${carInventory[1].price}</h2>
-                        <button class = "button" onClick = {handleClick2}><img src = {buy_larger} alt ="buy now image1"/></button>
+                        <button className = "button" onClick = {handleClick2}><img src = {buy_larger} alt ="buy now image1"/></button>
                     </div>
                 </div>
             </div>
