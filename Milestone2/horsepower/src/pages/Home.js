@@ -14,7 +14,7 @@ export function Home() {
     
             <article>
                 <div class = "row">
-                    <div class = "column">
+                    <div class = "columnHomePage">
                         <div class = "buy">
                             <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
                             <div class = "format">
@@ -22,7 +22,7 @@ export function Home() {
                             </div>
                         </div>
                     </div>
-                    <div class = "column">
+                    <div class = "columnHomePage">
                         <div class = "buy">
                             <Link to="/Rent"><img src = "https://www.autoguide.com/blog/wp-content/gallery/lamborghini-road-trip/Lamborghini-Transfagarasan-Trip-4.jpg" alt = "Car Buy Page" class = "homePageImage"/></Link>
                             <div class = "format">
