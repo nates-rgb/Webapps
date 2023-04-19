@@ -17,7 +17,7 @@ export function Buy() {
         buyStatus1(buy1 + 1);
         //window.location.reload();
     }
-    const resetClick1 = () => buyStatus1(0)
+    
 
     useEffect(() => {localStorage.setItem('buy1',buy1.toString());}, [buy1]);
 
@@ -30,7 +30,7 @@ export function Buy() {
         buyStatus2(buy2 + 1);
         //window.location.reload();
     }
-    const resetClick2 = () => buyStatus2(0)
+    
 
     useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
     if(localStorage.getItem("Authenticated")){

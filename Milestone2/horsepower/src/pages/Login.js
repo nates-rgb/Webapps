@@ -7,7 +7,7 @@ import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {auth, provider} from "../firebase"
-import {signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
+import {signInWithPopup, signInWithEmailAndPassword } from "firebase/auth"
 
 import { Navigate } from "react-router-dom";
 
@@ -41,7 +41,7 @@ export function Login() {
 
     // google login
     
-    const [curUser, setCurUser] = useState({})
+   
     
     const handleClick = async (e)=>{
         e.preventDefault();
@@ -55,14 +55,7 @@ export function Login() {
             console.log(error.message)
         }
     }
-    onAuthStateChanged(auth, (currentUser) => {
-        setCurUser(currentUser)
-        
-    })
-    console.log(localStorage.getItem("Authenticated"))
-    //console.log(Object.is(curUser, null))
-    console.log("i ran")
-    //console.log(curUser.email)
+   
         if(!localStorage.getItem("Authenticated")){
         return (<div>
             

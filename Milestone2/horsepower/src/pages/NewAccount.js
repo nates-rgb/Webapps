@@ -6,7 +6,7 @@ import create from "../img/create.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-import {createUserWithEmailAndPassword,updateProfile, onAuthStateChanged} from "firebase/auth"
+import {createUserWithEmailAndPassword,updateProfile} from "firebase/auth"
 import {auth} from "../firebase"
 import { Navigate } from "react-router-dom";
 
