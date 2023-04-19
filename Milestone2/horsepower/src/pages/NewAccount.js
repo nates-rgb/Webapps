@@ -12,7 +12,7 @@ import { Navigate } from "react-router-dom";
 import {LogOut} from "./universalComponets/Sign_Out"
 
 
-//
+
 export function NewAccount() {
 
     const [user,setUser]=useState({});
@@ -47,7 +47,7 @@ export function NewAccount() {
 
     };
     
-    
+
     console.log("next line is curr user")
     console.log(name)
     

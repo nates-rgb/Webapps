@@ -69,8 +69,7 @@ export function Login() {
             <Header />
             <Nav />
             <article>
-                <h1>this is current user: {curUser?.email}</h1>
-                <h1>this is current state: {localStorage.getItem("Authenticated")}</h1>
+                
                     <h2 className="color"><i>Log in and experience the magic!</i></h2>
                     <label htmlFor="uname"><img src={user} alt="username"/></label>
                     <input type="text" id="uname" placeholder="Your Username" required onChange={(event) => {
