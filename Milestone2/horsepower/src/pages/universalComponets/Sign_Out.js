@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {auth, provider} from "../../firebase"
+import React from 'react'
+import {auth} from "../../firebase"
 import {signOut} from "firebase/auth"
 import  logoutimg from "../../img/logOut.png"
 

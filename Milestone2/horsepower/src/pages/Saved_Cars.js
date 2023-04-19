@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import yourPurchases from "../img/yourPurchases.png"
 import yourRentals from "../img/yourRentals.png"
-import update from "../img/UPDATE.png"
+
 import del from "../img/delete.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
@@ -16,7 +16,7 @@ export function MySavedCars() {
         const storedBuyStatus1 = localStorage.getItem('buy1');
         return storedBuyStatus1 !== null ? Number(storedBuyStatus1) : 0;
     });
-    const handleClick1 = () => buyStatus1(buy1 + 1)
+   
     const resetClick1 = () => buyStatus1(0)
 
     useEffect(() => {localStorage.setItem('buy1',buy1.toString());}, [buy1]);
@@ -35,7 +35,7 @@ export function MySavedCars() {
         const storedBuyStatus2 = localStorage.getItem('buy2');
         return storedBuyStatus2 !== null ? Number(storedBuyStatus2) : 0;
     });
-    const handleClick2 = () => buyStatus2(buy2 + 1)
+    
     const resetClick2 = () => buyStatus2(0)
 
     useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
@@ -54,7 +54,7 @@ export function MySavedCars() {
         const storedRentStatus1 = localStorage.getItem('rent1');
         return storedRentStatus1 !== null ? Number(storedRentStatus1) : 0;
     });
-    const handleClickR1 = () => rentStatus1(rent1 + 1)
+    
     const resetClickR1 = () => rentStatus1(0)
 
     useEffect(() => {localStorage.setItem('rent1',rent1.toString());}, [rent1]);
@@ -73,7 +73,7 @@ export function MySavedCars() {
         const storedRentStatus2 = localStorage.getItem('rent2');
         return storedRentStatus2 !== null ? Number(storedRentStatus2) : 0;
     });
-    const handleClickR2 = () => rentStatus2(rent2 + 1)
+    
     const resetClickR2 = () => rentStatus2(0)
 
     useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);

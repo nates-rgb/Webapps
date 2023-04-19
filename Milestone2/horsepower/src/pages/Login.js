@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import user from "../img/username.png"
 import pass from "../img/password.png"
 import log from "../img/Log.png"
@@ -8,10 +8,10 @@ import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {auth, provider} from "../firebase"
 import {signInWithPopup, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
-import {Home} from "./Home"
+
 import { Navigate } from "react-router-dom";
-import {LogOut} from "./universalComponets/Sign_Out"
-import { useAuthContext } from '../context/AuthContext'
+
+
 import google from "../img/google.png"
 
 export function Login() {

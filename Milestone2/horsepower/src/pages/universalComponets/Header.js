@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import logo from "../../img/logo.png"
 import profile from "../../img/profile.png"
 import login from "../../img/Login.png"
 import {Link} from "react-router-dom"
-import { onAuthStateChanged} from "firebase/auth"
-import {auth, provider} from "../../firebase"
-import {LogOut} from "./Sign_Out"
+
+
 //header
 export function Header() {
-    const [curUser, setCurUser] = useState({})
     
-
-    onAuthStateChanged(auth, (currentUser) => {
-        setCurUser(currentUser)
-    })
     console.log("this is what the header is saying: ",  localStorage.getItem("Authenticated"))
 
 

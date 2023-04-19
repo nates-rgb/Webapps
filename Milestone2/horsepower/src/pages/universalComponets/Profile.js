@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { onAuthStateChanged} from "firebase/auth"
-import {auth, provider} from "../../firebase"
+import {auth} from "../../firebase"
 import {Header} from "./Header"
 import {Nav} from ".//Nav"
 import {Footer} from "./Footer"

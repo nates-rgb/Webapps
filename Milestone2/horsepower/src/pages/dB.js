@@ -1,5 +1,4 @@
-import React from "react";
-import {buy1} from "./Buy"
+
 
 
 const carInventory = 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, { useState, useEffect} from 'react'
 
 import { Navigate } from "react-router-dom";
 import buy_larger from "../img/buynowLarger.png"

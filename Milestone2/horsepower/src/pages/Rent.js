@@ -16,7 +16,7 @@ export function Rent() {
         rentStatus1(rent1 + 1)
         //window.location.reload();
     }
-    const resetClickR1 = () => rentStatus1(0)
+    
 
     useEffect(() => {localStorage.setItem('rent1',rent1.toString());}, [rent1]);
 
@@ -29,7 +29,7 @@ export function Rent() {
         rentStatus2(rent2 + 1)
         //window.location.reload();
     }
-    const resetClickR2 = () => rentStatus2(0)
+    
 
     useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);
     if(localStorage.getItem("Authenticated")){
