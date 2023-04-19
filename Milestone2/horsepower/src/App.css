@@ -121,12 +121,11 @@ footer{
 {
     opacity: 1;
     display: block;
-    width: 500px;
+    max-width: 100%;
     height: auto;
     transition: 0.5s ease;
     backface-visibility: hidden;
     border: 5px solid purple;
-    margin-left: 25%;
 }
 
 label{
@@ -229,9 +228,22 @@ p{
     display: flex;
 }
 
+.rowBuy 
+{
+    display: flex;
+    flex-warp: warp;
+}
+
 .column 
 {
     padding: 10px;
+}
+
+.columnBuy
+{
+    padding: 10px;
+    flex-basis: 50%;
+    box-sizing: border-box;
 }
 
 .columnHomePage 
