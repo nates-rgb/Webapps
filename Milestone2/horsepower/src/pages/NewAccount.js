@@ -27,8 +27,11 @@ export function NewAccount() {
         e.preventDefault();
         
         try{
-         await createUserWithEmailAndPassword(auth, newEmail, newPass)
-        localStorage.setItem("Authenticated", true)
+         await createUserWithEmailAndPassword(auth, newEmail, newPass).then(()=>{
+            localStorage.setItem("Authenticated", true)
+            window.location.reload(false);
+         })
+        
         const newUser={newEmail,displayName:name}
        
         console.log(newUser)

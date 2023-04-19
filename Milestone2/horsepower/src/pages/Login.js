@@ -30,6 +30,7 @@ export function Login() {
             loginPassword
           ).then(response => {
             localStorage.setItem("Authenticated", true)
+            window.location.reload(false);
         });
           console.log(user)
         }catch(error){
@@ -49,6 +50,7 @@ export function Login() {
         try {
             await signInWithPopup(auth, provider).then(response => {
                 localStorage.setItem("Authenticated", true)
+                window.location.reload(false);
             })
         }
         catch (error) {
