@@ -12,7 +12,7 @@ export function Contact() {
     
         <img src = {schedule} alt = "Service Schedule Banner" className = "serviceBanner"/>
        
-        <form action="" method="POST">
+        <form>
             <table className="center">
                 <tbody>
                <tr>
@@ -50,7 +50,7 @@ export function Contact() {
                </tbody>
             </table>
                 
-                <input type="submit" value="Submit"/>
+                <input type="button" value="Submit"/>
             </form>
         
         

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {auth, provider} from "../../firebase"
 import {signOut} from "firebase/auth"
+import  logoutimg from "../../img/logOut.png"
 
 export function LogOut() {
     const logout = async () => {
@@ -15,7 +16,7 @@ export function LogOut() {
     }
     
     return <div>
-            <button onClick = {logout}>Log Out</button>
+            <button onClick = {logout}><img src={logoutimg} alt="logout" className='logOut'/></button>
     </div>
 
 }

@@ -12,6 +12,7 @@ import {Home} from "./Home"
 import { Navigate } from "react-router-dom";
 import {LogOut} from "./universalComponets/Sign_Out"
 import { useAuthContext } from '../context/AuthContext'
+import google from "../img/google.png"
 
 export function Login() {
     
@@ -85,10 +86,10 @@ export function Login() {
                 <button onClick={simpleLogin} className='btn' id='btni'>
                     <img src={log} alt="login"/> 
                 </button>
-                <button onClick = {handleClick}>Login with Google</button>
+                <button onClick = {handleClick}><img src={google} alt="google" className='google'/></button>
             
                 <br/>
-                <a href="https://www.fit.edu/"> htmlForgot your password?</a>
+                <a href="https://www.fit.edu/">Forgot your password?</a>
                 <br/>
                 <Link to="/NewAccount">Sign up</Link>
                 <br/>
@@ -98,7 +99,7 @@ export function Login() {
 
             
         
-        <LogOut />
+        
 
         <Footer /> 
     </div>
