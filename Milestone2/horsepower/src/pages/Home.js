@@ -19,7 +19,7 @@ export function Home() {
                         <div className = "buy">
                             <Link to="/Buy"><img src = "https://insider.hagerty.com/wp-content/uploads/2021/02/2003-Ferrari-Enzo-Front_ThreeQuarter-scaled.jpg" alt = "Car Buy Page" className = "homePageImage"/></Link>
                             <div className = "format">
-                                <div className = "buyText"><img src = {buy_large} alt = "buy page"/></div>
+                                <Link to="/Buy"><div className = "buyText"><img src = {buy_large} alt = "buy page"/></div></Link>
                             </div>
                         </div>
                     </div>
@@ -27,9 +27,7 @@ export function Home() {
                         <div className = "buy">
                             <Link to="/Rent"><img src = "https://www.autoguide.com/blog/wp-content/gallery/lamborghini-road-trip/Lamborghini-Transfagarasan-Trip-4.jpg" alt = "Car Buy Page" className = "homePageImage"/></Link>
                             <div className = "format">
-                                <div className = "buyText"><img src = {rent_large} alt = "rent page"/></div>
-
-                            
+                                <Link to="/Rent"><div className = "buyText"><img src = {rent_large} alt = "rent page"/></div></Link>
                             </div>
                         </div>
                     </div>

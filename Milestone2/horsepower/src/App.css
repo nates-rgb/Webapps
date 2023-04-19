@@ -27,7 +27,7 @@ nav ul
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: inline-block;
+    display: flex;
 }
 
 nav li
@@ -43,13 +43,25 @@ h2, h4, p {
 
 nav
 {
-    border-width: 6px;
+    border-top: 3px;
+    border-bottom: 3px;
+    border-left: 0px;
+    border-right: 0px;
     border-style: solid;
     border-color:purple;
     margin-top: 8px;
     margin-bottom: 8px;
     
 }
+
+nav img
+{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 .center {
     margin-left: auto;
     margin-right: auto;
@@ -62,7 +74,7 @@ nav
 footer{
     text-align: center;
     color: #FFFFFF;
-    border-top: 6px solid purple;
+    border-top: 3px solid purple;
     
     
 }
