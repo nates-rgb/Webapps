@@ -18,26 +18,37 @@ export function Login() {
     
     const [loginEmail, setLoginEmail] = useState("")
     const [loginPassword, setLoginPassword] = useState("")
-    
-    const simpleLogin = async () => {
+   
+    //email login
+    const simpleLogin = async (e) => {
+        e.preventDefault();
         try{
           const user = await signInWithEmailAndPassword(
             auth,
             loginEmail,
             loginPassword
-          );
+          ).then(response => {
+            localStorage.setItem("Authenticated", true)
+        });
           console.log(user)
         }catch(error){
           console.log(error.message)
         }
       }
+
+
+
+    // google login
     const [value, setValue ] = useState('')
     const [curUser, setCurUser] = useState({})
+    
     const handleClick = async (e)=>{
-        e.preventDefault()
+        e.preventDefault();
         console.log("state")
         try {
-            await signInWithPopup(auth, provider).then(localStorage.setItem("Authenticated", true))
+            await signInWithPopup(auth, provider).then(response => {
+                localStorage.setItem("Authenticated", true)
+            })
         }
         catch (error) {
             console.log(error.message)
@@ -47,12 +58,11 @@ export function Login() {
         setCurUser(currentUser)
         
     })
-    console.log(curUser == null)
-    console.log(Object.is(curUser, null))
+    console.log(localStorage.getItem("Authenticated"))
+    //console.log(Object.is(curUser, null))
     console.log("i ran")
     //console.log(curUser.email)
-    if( user )
-    {
+        if(!localStorage.getItem("Authenticated")){
         return (<div>
             
             <div id = 'main_body'>
@@ -60,7 +70,7 @@ export function Login() {
             <Nav />
             <article>
                 <h1>this is current user: {curUser?.email}</h1>
-                
+                <h1>this is current state: {localStorage.getItem("Authenticated")}</h1>
                     <h2 className="color"><i>Log in and experience the magic!</i></h2>
                     <label htmlFor="uname"><img src={user} alt="username"/></label>
                     <input type="text" id="uname" placeholder="Your Username" required onChange={(event) => {
@@ -93,17 +103,13 @@ export function Login() {
 
         <Footer /> 
     </div>
-            
-        </div>)
-    } else {
-    return (
+          
 
-        <Navigate replace to='/' />
+        </div>)}
+        return(<>
+         <h1>this is current state: {localStorage.getItem("Authenticated")}</h1>
+         <Footer/></>)
+    
+    
 
-        
-
-                  
-   
-    );
-}
 }

@@ -1,0 +1,308 @@
+body{
+    background-image: url('https://media.istockphoto.com/id/1371923818/vector/tropical-landscape-with-palm-trees-and-sunset-in-80s-style-summer-time-scarlet-gradient-sun.jpg?s=612x612&w=0&k=20&c=GXrJlUIaSDRfvuPldw0wMDm54QI7zBcJ7dmYe-0wu2M=');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(255, 157, 248);
+}
+
+#main_body
+{
+    border-width: 3px;
+    border-style: solid;
+    border-color:purple; 
+    text-align: center; 
+    width: 70%; 
+    margin-left: 17.5%; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    background-image: url('https://htmlcolors.com/gradients-images/56-purple-orange-gradient.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav li
+{
+    float: left;
+    padding-left: 20px;
+}
+
+h2, h4, p {
+    color: #FFFFFF;
+    
+}
+
+nav
+{   
+    border-width: 6px;
+    border-style: solid;
+    border-color:purple;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.full{
+    width: 100%;
+}
+
+footer{
+    text-align: center;
+    color: #FFFFFF;
+    border-top: 6px solid purple;
+    
+    
+}
+#login_button
+{
+    margin-left:50%;
+}
+.btni {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column
+{
+    float: left;
+    padding: 10px;
+}
+
+.middle
+{
+    width: 55%;
+    text-align: left;
+}
+.right
+{
+    width: 20%;
+    text-align: center;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.buyPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}
+label{
+    
+    color: #FFFFFF;
+
+}
+
+.aboutUs img
+{
+    width: 15%;
+    float: left;
+    padding: 5%;
+}
+.aboutUsHeader
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    color: #FFFFFF;
+}
+
+
+
+.left {
+    text-align:left;
+    width: 25%;
+}
+
+.color {
+    color:rgb(149, 0, 255);
+}
+
+.framed {
+    border:0;
+}
+
+.buyPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}
+
+.buy
+{
+    position: relative;
+    width: 100%;
+}
+
+.buy:hover .buyPageImage 
+{
+    opacity: 0.3;
+}
+  
+.buy:hover .format 
+{
+    opacity: 1;
+}
+
+.format
+{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.buyText img
+{
+    width: 100%;
+    height: auto;
+}
+
+.buyText a:link
+{
+    text-decoration: none;
+}
+
+.buyText a:visited
+{
+    text-decoration: none;
+}
+
+.buyText a:hover
+{
+    text-decoration: none;
+}
+
+.buyText a:active
+{
+    text-decoration: none;
+}
+
+.row 
+{
+    display: flex;
+}
+
+.column 
+{
+    padding: 10px;
+}
+
+
+
+.ud{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    }
+    
+    
+    .flex-container {
+    display: flex;
+    }
+    
+    .flex-child {
+    flex: 1;
+    border: 2px solid purple;
+    }  
+    
+    .flex-child:first-child {
+    margin-right: 20px;
+    } 
+    
+    .image
+    {
+    border: 2px solid yellow;
+    width : 200px;
+    height : 100px;
+    display: inline-block;
+    }
+
+    #content_body
+{
+    text-align: left; 
+    margin-left: 2%; 
+    font-family:fantasy;
+}
+
+.discription{
+    text-align: center;
+     font-family: 'Times New Roman', Times, serif; 
+     font-size: x-large;  
+     margin-left: 2%;
+     color: #FFFFFF;
+}
+.purchaseHeader
+{
+    text-align: center;
+}
+
+.rentHeader
+{
+    text-align: center;
+}
+
+
+.button 
+{
+    text-align: center;
+}
+
+.rentPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+}
+.btn {
+    background-color: inherit;
+    border-width: 0px;
+}
+
+.wrapper {
+    margin:20px;
+}

@@ -197,8 +197,12 @@ p{
 {
     width: 100%;
     height: auto;
+    text-align: center;
 }
-
+.profile{
+    width: 150px;
+    height: 50px;
+}
 .buyText a:link
 {
     text-decoration: none;
@@ -212,6 +216,7 @@ p{
 .buyText a:hover
 {
     text-decoration: none;
+    float:right;
 }
 
 .buyText a:active
