@@ -8,7 +8,7 @@ import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {carInventory} from './dB'
-
+import { Navigate } from "react-router-dom";
 
 export function MySavedCars() {
     //Car 1
@@ -88,99 +88,105 @@ export function MySavedCars() {
     }
 
 
-    return(
+    if(localStorage.getItem("Authenticated"))
+    {
+        return(
+
             
-        <div id = 'main_body'>
-            <Header />
-            <Nav />
+                    <div id = 'main_body'>
+                        <Header />
+                        <Nav />
 
-            <div className = "wrapper">
-                <div id = 'content_body' className = "flex-container">
-                    <div id = 'purchases' className = 'flex-child purchases'>
-                        <div className = "purchaseHeader"><img src = {yourPurchases} alt = "your purchases header"/></div>
-                        {(() => { if (carInventory[0].boughtStatus === 'true') { 
-                            return (
-                                <div className = "row">
-                                    <div className = "column buyA">
-                                        <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg' className = 'buyPageImage' alt = "your car image1"/>
-                                    </div>
-                                    <div className = "column buyB">
-                                        <h2>{carInventory[0].name}</h2>
-                                        <button type = 'button' className = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
-                                    </div>
+                        <div className = "wrapper">
+                            <div id = 'content_body' className = "flex-container">
+                                <div id = 'purchases' className = 'flex-child purchases'>
+                                    <div className = "purchaseHeader"><img src = {yourPurchases} alt = "your purchases header"/></div>
+                                    {(() => { if (carInventory[0].boughtStatus === 'true') { 
+                                        return (
+                                            <div className = "row">
+                                                <div className = "column buyA">
+                                                    <img src = 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg' className = 'buyPageImage' alt = "your car image1"/>
+                                                </div>
+                                                <div className = "column buyB">
+                                                    <h2>{carInventory[0].name}</h2>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
+                                                </div>
+                                            </div>
+                                        );}
+                                    else {
+                                        return null;
+                                    }
+                                    })()}
+                                    {(() => { if (carInventory[1].boughtStatus === 'true') { 
+                                        return (
+                                            <div className = "row">
+                                                <div className = "column buyA">
+                                                    <img src = 'https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*' className = 'buyPageImage' alt = "your car image1"/>
+                                                </div>
+                                                <div className = "column buyB">
+                                                    <h2>{carInventory[1].name}</h2>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
+                                                </div>
+                                            </div>
+                                        );}
+                                    else {
+                                        return null;
+                                    }
+                                    })()}
                                 </div>
-                            );}
-                        else {
-                            return null;
-                        }
-                        })()}
-                        {(() => { if (carInventory[1].boughtStatus === 'true') { 
-                            return (
-                                <div className = "row">
-                                    <div className = "column buyA">
-                                        <img src = 'https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*' className = 'buyPageImage' alt = "your car image1"/>
-                                    </div>
-                                    <div className = "column buyB">
-                                        <h2>{carInventory[1].name}</h2>
-                                        <button type = 'button' className = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
-                                    </div>
+                                
+                                <div id = 'rentals' className = 'flex-child rentals' >
+                                    <div className = "rentHeader"><img src = {yourRentals} alt = "your rentals header"/></div>
+                                    {(() => { if (carInventory[2].boughtStatus === 'true') { 
+                                        return (
+                                            <div className = "row">
+                                                <div className = "column buyA">
+                                                    <img src = 'https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg' className = 'buyPageImage' alt = "your car image1"/>
+                                                </div>
+                                                <div className = "column buyB">
+                                                    <h2>{carInventory[2].name}</h2>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
+                                                </div>
+                                            </div>
+                                        );}
+                                    else {
+                                        return null;
+                                    }
+                                    })()}
+                                    {(() => { if (carInventory[3].boughtStatus === 'true') { 
+                                        return (
+                                            <div className = "row">
+                                                <div className = "column buyA">
+                                                    <img src = 'https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg' className = 'buyPageImage' alt = "your car image1"/>
+                                                </div>
+                                                <div className = "column buyB">
+                                                    <h2>{carInventory[3].name}</h2>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
+                                                </div>
+                                            </div>
+                                        );}
+                                    else {
+                                        return null;
+                                    }
+                                    })()}
                                 </div>
-                            );}
-                        else {
-                            return null;
-                        }
-                        })()}
-                    </div>
+                            </div>
+                        </div>
+                    <p className="discription">
+                        In your personal page, you can view your most recent purchases, awaiting to be delivered. You have <br/>
+                        the choice to update your personal information, vehicle specification or shipping address. In the <br/>
+                        'Your Rentals' section, view your upcoming rentals, and update the where, when and how of your Horse Power <br/>
+                        experience. 
+                    </p>
                     
-                    <div id = 'rentals' className = 'flex-child rentals' >
-                        <div className = "rentHeader"><img src = {yourRentals} alt = "your rentals header"/></div>
-                        {(() => { if (carInventory[2].boughtStatus === 'true') { 
-                            return (
-                                <div className = "row">
-                                    <div className = "column buyA">
-                                        <img src = 'https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg' className = 'buyPageImage' alt = "your car image1"/>
-                                    </div>
-                                    <div className = "column buyB">
-                                        <h2>{carInventory[2].name}</h2>
-                                        <button type = 'button' className = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
-                                    </div>
-                                </div>
-                            );}
-                        else {
-                            return null;
-                        }
-                        })()}
-                        {(() => { if (carInventory[3].boughtStatus === 'true') { 
-                            return (
-                                <div className = "row">
-                                    <div className = "column buyA">
-                                        <img src = 'https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg' className = 'buyPageImage' alt = "your car image1"/>
-                                    </div>
-                                    <div className = "column buyB">
-                                        <h2>{carInventory[3].name}</h2>
-                                        <button type = 'button' className = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
-                                    </div>
-                                </div>
-                            );}
-                        else {
-                            return null;
-                        }
-                        })()}
+                    <Footer />
+
+
                     </div>
-                </div>
-            </div>
-		<p className="discription">
-			In your personal page, you can view your most recent purchases, awaiting to be delivered. You have <br/>
-			the choice to update your personal information, vehicle specification or shipping address. In the <br/>
-			'Your Rentals' section, view your upcoming rentals, and update the where, when and how of your Horse Power <br/>
-			experience. 
-		</p>
-		
-        <Footer />
+                                
+            
+                )
+    }
+    return(<><Navigate replace to="/" /></>)
 
-
-        </div>
-                    
-   
-    )
 }

@@ -14,20 +14,40 @@ export function Header() {
     onAuthStateChanged(auth, (currentUser) => {
         setCurUser(currentUser)
     })
-    return (
+    console.log("this is what the header is saying: ",  localStorage.getItem("Authenticated"))
+
+
+
+    if(!localStorage.getItem("Authenticated")){
+        return(
 
         <div>
             <header id='logo'>
     
                 <Link to="/"><img src= {logo} alt = "Logo"/></Link>
     
-                {curUser?.email} <div id='login_button'>
-                <Link to="/Login"><img src={profile} alt = "login page button" className='profile'/></Link>
-                <LogOut />
+                <div id='login_button'>
+                <Link to="/Login"><img src={login} alt = "login page button" /></Link>
                 </div>
 
     
             </header>
             </div>
     )
+        }
+        return(
+
+            <div>
+                <header id='logo'>
+        
+                    <Link to="/"><img src= {logo} alt = "Logo"/></Link>
+        
+                    <div id='login_button'>
+                    <Link to="/Profile"><img src={profile} alt = "login page button" className='profile'/></Link>
+                    </div>
+    
+        
+                </header>
+                </div>
+        )
 }

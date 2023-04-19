@@ -12,13 +12,11 @@ import {Login} from "./pages/Login"
 import {NewAccount} from "./pages/NewAccount"
 import { AuthProvider} from './context/AuthContext';
 import {Home} from './pages/Home'
+import {Profile} from "./pages/universalComponets/Profile"
 import "./App.css"
 
 export function App() {
-  useEffect(()=>{
-    localStorage.setItem("Authenticated", false)
-  },[]
-  )
+  
   
   return(
     <div>
@@ -34,6 +32,7 @@ export function App() {
       <Route path="/About" element={<About />} />
       <Route path="/Login" element={<Login />}/>
       <Route path="/NewAccount" element={<NewAccount />}/>
+      <Route path="/Profile" element={<Profile />}/>
 
     </Routes>
     </AuthProvider>

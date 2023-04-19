@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from 'react'
 
-
+import { Navigate } from "react-router-dom";
 import buy_larger from "../img/buynowLarger.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
@@ -33,7 +33,7 @@ export function Buy() {
     const resetClick2 = () => buyStatus2(0)
 
     useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
-
+    if(localStorage.getItem("Authenticated")){
     return(
 
         <div id = 'main_body'>
@@ -77,4 +77,6 @@ export function Buy() {
         <Footer />
     </div>       
     )
+    }
+    return(<><Navigate replace to="/" /></>)
 }

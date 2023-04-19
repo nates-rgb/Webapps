@@ -5,7 +5,10 @@ import {signOut} from "firebase/auth"
 export function LogOut() {
     const logout = async () => {
         try{
-            await signOut(auth).then(localStorage.clear());
+            await signOut(auth).then(() => {
+                localStorage.clear()
+                window.location.reload(false);
+            });
         }catch(error){
             console.log(error.message)
         }

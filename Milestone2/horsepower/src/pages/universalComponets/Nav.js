@@ -8,7 +8,8 @@ import forms from "../../img/FORMS.png"
 import {Link} from "react-router-dom"
 //nav
 export function Nav() {
-    return (
+    if(localStorage.getItem("Authenticated")){
+        return (
 
         <div>
             <nav>
@@ -25,5 +26,19 @@ export function Nav() {
             </nav>
         </div>
     )
+        }
+        return(
+            <div>
+            <nav>
+                
+                <ul>
+                    <Link to="/"><li><img src={home} alt = "home page button"/></li></Link>
+                    <Link to="/About"><li><img src={about} alt = "about page button"/></li></Link>
+                    <Link to="/Contact"><li><img src={forms} alt = "contact us page button"/></li></Link>
+                </ul>
+                
+            </nav>
+        </div>
+        )
 }
 

@@ -39,7 +39,7 @@ export function Login() {
 
 
     // google login
-    const [value, setValue ] = useState('')
+    
     const [curUser, setCurUser] = useState({})
     
     const handleClick = async (e)=>{
@@ -106,9 +106,7 @@ export function Login() {
           
 
         </div>)}
-        return(<>
-         <h1>this is current state: {localStorage.getItem("Authenticated")}</h1>
-         <Footer/></>)
+        return(<><Navigate replace to="/" /></>)
     
     
 

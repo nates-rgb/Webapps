@@ -46,25 +46,20 @@ export function NewAccount() {
         
 
     };
-    // useEffect(() => {
-    //     const loggedIn = localStorage.getItem('Authenticated');
-    //     if (loggedIn) {
-    //       setLoggedIn(loggedIn);
-    //     }
-    //   }, [loggedIn]);
+    
+    
     console.log("next line is curr user")
     console.log(name)
     
-    
-    return (
+    if(!localStorage.getItem("Authenticated")){
+        return (
 
         <div id = 'main_body'>
             <Header />
             <Nav />
 
             <article>
-            <h1>{user?.displayName}</h1>
-            <h1>{loggedIn}</h1>
+            
                 
                 <h2 className="color">Create Your Account!</h2>
                 <table className="center">
@@ -93,8 +88,7 @@ export function NewAccount() {
                 <img src={create} alt="create Account"/>
             </button>
         
-        <h1>user logged in: {curUser?.email}</h1>
-        <LogOut />
+        
         </article>
         
        
@@ -105,5 +99,7 @@ export function NewAccount() {
                     
    
     )
+        }
+    return(<><Navigate replace to="/" /></>)
     
 }

@@ -4,6 +4,7 @@ import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {carInventory} from './dB'
+import { Navigate } from "react-router-dom";
 
 export function Rent() {
     //Car 1
@@ -31,7 +32,8 @@ export function Rent() {
     const resetClickR2 = () => rentStatus2(0)
 
     useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);
-    return (
+    if(localStorage.getItem("Authenticated")){
+        return(
 
         <div id = 'main_body'>
             <Header />
@@ -77,4 +79,6 @@ export function Rent() {
     </div>    
    
     )
+        }
+        return(<><Navigate replace to="/" /></>)
 }
