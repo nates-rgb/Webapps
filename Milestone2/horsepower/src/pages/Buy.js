@@ -52,7 +52,7 @@ export function Buy() {
                     </div>
                     <div className = "column right">
                         <h2>${carInventory[0].price}</h2>
-                        <button className = "button" onClick = {handleClick1}><img src = {buy_larger} alt ="buy now image1"/></button>
+                        <button className = "button" onClick = {handleClick1}><img src = {buy_larger} alt ="buy now image1" className = "buyNowButtonImg"/></button>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ export function Buy() {
                     </div>
                     <div className = "column right">
                         <h2>${carInventory[1].price}</h2>
-                        <button className = "button" onClick = {handleClick2}><img src = {buy_larger} alt ="buy now image1"/></button>
+                        <button className = "button" onClick = {handleClick2}><img src = {buy_larger} alt ="buy now image1" className = "buyNowButtonImg"/></button>
                     </div>
                 </div>
             </div>

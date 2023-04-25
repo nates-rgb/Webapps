@@ -127,7 +127,7 @@ footer{
 {
     opacity: 1;
     display: block;
-    width: 245px;
+    max-width: 100%;
     height: auto;
     transition: 0.5s ease;
     backface-visibility: hidden;
@@ -145,6 +145,34 @@ footer{
     border: 5px solid purple;
 }
 
+.buyNowButtonImg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.rentNowButtonImg
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.savedCarColNames
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.deleteButton
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 label{
     
     color: #FFFFFF;
@@ -160,6 +188,8 @@ label{
 .aboutUsHeader
 {
     display: block;
+    max-width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -325,12 +355,6 @@ p{
     text-align: center;
 }
 
-
-.button 
-{
-    text-align: center;
-}
-
 .rentPageImage
 {
     opacity: 1;
@@ -352,6 +376,7 @@ p{
 
 .button
 {
+    text-align: center;
     background-color: transparent;
     border: none;
 }

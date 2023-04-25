@@ -52,7 +52,7 @@ export function Rent() {
                         </div>
                         <div className = "column right">
                         <h2>${carInventory[2].price}</h2>
-                            <button className = "button" onClick = {handleClickR1}><img src = {rent_larger} alt ="buy now image1"/></button>
+                            <button className = "button" onClick = {handleClickR1}><img src = {rent_larger} alt ="buy now image1" className = "rentNowButtonImg"/></button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export function Rent() {
                         </div>
                         <div className = "column right">
                         <h2>${carInventory[3].price}</h2>
-                            <button className = "button" onClick = {handleClickR2}><img src = {rent_larger} alt ="buy now image1"/></button>
+                            <button className = "button" onClick = {handleClickR2}><img src = {rent_larger} alt ="buy now image1" className = "rentNowButtonImg"/></button>
                         </div>
                     </div>
                 </div>

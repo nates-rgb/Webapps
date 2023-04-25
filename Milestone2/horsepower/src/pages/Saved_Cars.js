@@ -109,7 +109,7 @@ export function MySavedCars() {
                                                 </div>
                                                 <div className = "column buyB">
                                                     <h2>{carInventory[0].name}</h2>
-                                                    <button type = 'button' className = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button"/></button>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClick1}> <img src={del} alt = "delete button" className = "deleteButton"/></button>
                                                 </div>
                                             </div>
                                         );}
@@ -125,7 +125,7 @@ export function MySavedCars() {
                                                 </div>
                                                 <div className = "column buyB">
                                                     <h2>{carInventory[1].name}</h2>
-                                                    <button type = 'button' className = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button"/></button>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClick2}> <img src={del} alt = "delete button" className = "deleteButton"/></button>
                                                 </div>
                                             </div>
                                         );}
@@ -145,7 +145,7 @@ export function MySavedCars() {
                                                 </div>
                                                 <div className = "column buyB">
                                                     <h2>{carInventory[2].name}</h2>
-                                                    <button type = 'button' className = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button"/></button>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClickR1}> <img src={del} alt = "delete button" className = "deleteButton"/></button>
                                                 </div>
                                             </div>
                                         );}
@@ -161,7 +161,7 @@ export function MySavedCars() {
                                                 </div>
                                                 <div className = "column buyB">
                                                     <h2>{carInventory[3].name}</h2>
-                                                    <button type = 'button' className = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button"/></button>
+                                                    <button type = 'button' className = 'ud' onClick = {resetClickR2}> <img src={del} alt = "delete button" className = "deleteButton"/></button>
                                                 </div>
                                             </div>
                                         );}
