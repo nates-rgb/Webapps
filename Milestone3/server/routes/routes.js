@@ -13,11 +13,11 @@ const ObjectId = require("mongodb").ObjectId;
  
  
 // This section will help you get a list of all the cars.
-itemRoutes.route("/item").get(async function (req, res) {
+itemRoutes.route("/item/buy").get(async function (req, res) {
  let db_connect = dbo.getDb();
  console.log(db_connect);
  var result = await db_connect
-   .collection("cars")
+   .collection("buy")
    .find({}).toArray();
  //  .toArray(function (err, result) {
  //    
