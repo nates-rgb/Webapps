@@ -76,7 +76,7 @@ export function Rent() {
     const Listing = (props) => (
         <div className = "row">
             <div className = "column left">
-                <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "rentPageImage"/>
+                <img src = {props.record.Image} alt = "Car Buy Page" className = "rentPageImage"/>
             </div>
             <div className = "column middle">
                 <h2>{props.record.Manufacturer} {props.record.Model}</h2>
