@@ -376,3 +376,13 @@ p{
     text-align: center;
     width: 50%;
 }
+
+.alert {
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

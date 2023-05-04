@@ -15,6 +15,8 @@ export function Buy() {
     });
     const handleClick1 = () => {
         buyStatus1(buy1 + 1);
+        //alert
+        alert('Car Purchased!');
         //window.location.reload();
     }
     
@@ -28,6 +30,7 @@ export function Buy() {
     });
     const handleClick2 = () => {
         buyStatus2(buy2 + 1);
+        alert('Car Purchased!');
         //window.location.reload();
     }
     

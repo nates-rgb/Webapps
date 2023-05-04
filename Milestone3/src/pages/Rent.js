@@ -13,7 +13,8 @@ export function Rent() {
         return storedRentStatus1 !== null ? Number(storedRentStatus1) : 0;
     });
     const handleClickR1 = () => {
-        rentStatus1(rent1 + 1)
+        rentStatus1(rent1 + 1);
+        alert('Car Purchased!');
         //window.location.reload();
     }
     
@@ -26,7 +27,8 @@ export function Rent() {
         return storedRentStatus2 !== null ? Number(storedRentStatus2) : 0;
     });
     const handleClickR2 = () => {
-        rentStatus2(rent2 + 1)
+        rentStatus2(rent2 + 1);
+        alert('Car Purchased!');
         //window.location.reload();
     }
     
