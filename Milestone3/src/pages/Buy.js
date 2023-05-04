@@ -108,23 +108,6 @@ export function Buy() {
             <div className = "item1">
                 {recordList()}
             </div>
-            <br/>
-            <div className = "item2">
-                <div className = "row">
-                    <div className = "column left">
-                        <img src = "https://hips.hearstapps.com/hmg-prod/images/aston-martin-valhalla-101-1626200852.jpg?crop=1.00xw:0.751xh;0,0.170xh&resize=1200:*" alt = "Car Buy Page" className = "buyPageImage"/>
-                    </div>
-                    <div className = "column middle">
-                        <h2>{carInventory[1].name}</h2>
-                        <h4>Brand: {carInventory[1].brand} &nbsp; Model: {carInventory[1].model} &nbsp; Color: {carInventory[1].color}</h4>
-                        <p>{carInventory[1].description}</p>
-                    </div>
-                    <div className = "column right">
-                        <h2>${carInventory[1].price}</h2>
-                        <button className = "button" onClick = {handleClick2}><img src = {buy_larger} alt ="buy now image1"/></button>
-                    </div>
-                </div>
-            </div>
         </article>
         <Footer />
         </div>       

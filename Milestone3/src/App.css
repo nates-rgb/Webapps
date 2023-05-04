@@ -141,6 +141,7 @@ header img
     transition: 0.5s ease;
     backface-visibility: hidden;
     border: 5px solid purple;
+    margin-top: 10%;
 }
 
 .homePageImage
