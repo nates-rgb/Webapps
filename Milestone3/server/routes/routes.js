@@ -27,6 +27,22 @@ itemRoutes.route("/item/buy").get(async function (req, res) {
   
   console.log("after db_connect")
 });
+
+// This section will help you get a list of all the cars.
+itemRoutes.route("/item/rent").get(async function (req, res) {
+  let db_connect = dbo.getDb();
+  console.log(db_connect);
+  var result = await db_connect
+    .collection("rent")
+    .find({}).toArray();
+  //  .toArray(function (err, result) {
+  //    
+  //    if (err) throw err;
+      res.json(result);
+  //  });
+   
+   console.log("after db_connect")
+ });
  
 // This section will help you get a single item by id
 itemRoutes.route("/item/:id").get(function (req, res) {

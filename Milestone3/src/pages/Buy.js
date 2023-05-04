@@ -5,10 +5,6 @@ import buy_larger from "../img/buynowLarger.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-import {carInventory} from './dB'
-//       <td>{props.record.name}</td>
-//       <td>{props.record.position}</td>
-//       <td>{props.record.level}</td>
 
 export function Buy() {
 
@@ -42,7 +38,7 @@ export function Buy() {
     function recordList() {
         return records.map((record) => {
         return (
-            <Record
+            <Listing
             record={record}
             key={record._id}
             />
@@ -77,8 +73,9 @@ export function Buy() {
         //window.location.reload();
     }
 
-    
-    const Record = (props) => (
+    useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
+
+    const Listing = (props) => (
         <div className = "row">
             <div className = "column left">
                 <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "buyPageImage"/>
@@ -96,8 +93,6 @@ export function Buy() {
         </div>
     );
     
-
-    useEffect(() => {localStorage.setItem('buy2',buy2.toString());}, [buy2]);
     if(localStorage.getItem("Authenticated")){
     return(
 
@@ -105,9 +100,7 @@ export function Buy() {
             <Header />
             <Nav />
         <article>
-            <div className = "item1">
                 {recordList()}
-            </div>
         </article>
         <Footer />
         </div>       

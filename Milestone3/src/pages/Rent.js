@@ -3,10 +3,48 @@ import rent_larger from "../img/rentnowLarger.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-import {carInventory} from './dB'
 import { Navigate } from "react-router-dom";
 
 export function Rent() {
+
+    const [records, setRecords] = useState([]);
+ 
+    // This method fetches the records from the database.
+    useEffect(() => {
+      async function getRecords() {
+       console.log("hey i ran");
+        const response = await fetch(`http://localhost:5000/item/rent/`);
+        console.log("i got past the fetch");
+        console.log(response);
+        
+        if (!response.ok) {
+          const message = `An error occurred: ${response.statusText}`;
+          window.alert(message);
+          return;
+        }
+    
+        const records = await response.json();
+        console.log(records)
+        setRecords(records);
+      }
+    
+      getRecords();
+    
+      return;
+    }, [records.length]);
+
+    // This method will map out the records on the table
+    function recordList() {
+        return records.map((record) => {
+        return (
+            <Listing
+            record={record}
+            key={record._id}
+            />
+        );
+        });
+    }
+
     //Car 1
     const [rent1, rentStatus1] = useState(() => {
         const storedRentStatus1 = localStorage.getItem('rent1');
@@ -34,6 +72,25 @@ export function Rent() {
     
 
     useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);
+
+    const Listing = (props) => (
+        <div className = "row">
+            <div className = "column left">
+                <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "rentPageImage"/>
+            </div>
+            <div className = "column middle">
+                <h2>{props.record.Manufacturer} {props.record.Model}</h2>
+                <h4>Year: {props.record.Year} &nbsp; Color: {props.record.Color} &nbsp;</h4>
+                <h4>Mile Limit: {props.record.MileLimit} &nbsp; Renter Insurance: {props.record.RenterInsurance}</h4>
+                <h4>Engine: {props.record.Engine} &nbsp; Horsepower: {props.record.Horsepower} &nbsp; 0 - 60: {props.record.zeroToSixty} &nbsp; Transmission: {props.record.Transmission} &nbsp; Top Speed: {props.record.TopSpeed}</h4>
+            </div>
+            <div className = "column right">
+                <h2>{props.record.Price} Per Day</h2>
+                <button className = "button" onClick = {handleClickR1}><img src = {rent_larger} alt ="buy now image1"/></button>
+            </div>
+        </div>
+    );
+
     if(localStorage.getItem("Authenticated")){
         return(
 
@@ -42,39 +99,7 @@ export function Rent() {
             <Nav />
 
             <article>
-                <div className = "item1">
-                    <div className = "row">
-                        <div className = "column left">
-                            <img src = "https://www.supercars.net/blog/wp-content/uploads/2018/06/Ferrari-LaFerrari-Ultimate-Guide-57.jpg" alt = "Car Rent Page" className = "rentPageImage"/>
-                        </div>
-                        <div className = "column middle">
-                            <h2>{carInventory[2].name}</h2>
-                            <h4>Brand: {carInventory[2].brand} &nbsp; Model: {carInventory[2].model} &nbsp; Color: {carInventory[2].color}</h4>
-                            <p>{carInventory[2].description}</p>
-                        </div>
-                        <div className = "column right">
-                        <h2>${carInventory[2].price}</h2>
-                            <button className = "button" onClick = {handleClickR1}><img src = {rent_larger} alt ="buy now image1"/></button>
-                        </div>
-                    </div>
-                </div>
-                <br/>
-                <div className = "item2">
-                    <div className = "row">
-                        <div className = "column left">
-                            <img src = "https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/wheels/wp-content/uploads/2022/07/2022_MB_G-Class_inline-1.jpg" alt = "Car Rent Page" className = "rentPageImage"/>
-                        </div>
-                        <div className = "column middle">
-                            <h2>{carInventory[3].name}</h2>
-                            <h4>Brand: {carInventory[3].brand} &nbsp; Model: {carInventory[3].model} &nbsp; Color: {carInventory[3].color}</h4>
-                            <p>{carInventory[3].description}</p>
-                        </div>
-                        <div className = "column right">
-                        <h2>${carInventory[3].price}</h2>
-                            <button className = "button" onClick = {handleClickR2}><img src = {rent_larger} alt ="buy now image1"/></button>
-                        </div>
-                    </div>
-                </div>
+                {recordList()}
             </article>
     <Footer />
 

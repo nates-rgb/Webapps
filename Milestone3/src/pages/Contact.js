@@ -45,7 +45,7 @@ export function Contact() {
                </tr> 
                <tr>
                         <td><label htmlFor = 'message'>Send us a message!</label></td>
-                        <td><textarea id="message" placeholder="What can we do htmlFor you?"></textarea></td>
+                        <td><textarea id="message" placeholder="What can we do for you?"></textarea></td>
                </tr>
                </tbody>
             </table>

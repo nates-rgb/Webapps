@@ -144,6 +144,18 @@ header img
     margin-top: 10%;
 }
 
+.rentPageImage
+{
+    opacity: 1;
+    display: block;
+    width: 245px;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border: 5px solid purple;
+    margin-top: 10%;
+}
+
 .homePageImage
 {
     opacity: 1;
