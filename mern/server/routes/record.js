@@ -15,6 +15,7 @@ const ObjectId = require("mongodb").ObjectId;
 // This section will help you get a list of all the cars.
 recordRoutes.route("/record").get(async function (req, res) {
  let db_connect = dbo.getDb();
+ console.log("print conn")
  console.log(db_connect);
  var result = await db_connect
    .collection("cars")

@@ -16,7 +16,7 @@ module.exports = {
     // Send a ping to confirm a successful connection
     _db = client.db("horsepower")
     if(_db){
-      console.log("obj exsist");
+      console.log(_db);
       
     
     }

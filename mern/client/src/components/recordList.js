@@ -26,7 +26,7 @@ export default function RecordList() {
  useEffect(() => {
    async function getRecords() {
     console.log("hey i ran");
-     const response = await fetch(`http://localnode:5000/record/`);
+     const response = await fetch(`http://localhost:5000/record/`);
      console.log("i got past the fetch");
      console.log(response);
      
@@ -48,7 +48,7 @@ export default function RecordList() {
  
  // This method will delete a record
  async function deleteRecord(id) {
-   await fetch(`http://localnode:5000/${id}`, {
+   await fetch(`http://localhost:5000/${id}`, {
      method: "DELETE"
    });
  
