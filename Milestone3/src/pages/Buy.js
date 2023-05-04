@@ -84,12 +84,13 @@ export function Buy() {
                 <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "buyPageImage"/>
             </div>
             <div className = "column middle">
-                <h2>{props.record.name}</h2>
-                <h4>Brand: {carInventory[0].brand} &nbsp; Model: {carInventory[0].model} &nbsp; Color: {carInventory[0].color}</h4>
-                <p>{carInventory[0].description}</p>
+                <h2>{props.record.Manufacturer} {props.record.Model}</h2>
+                <h4>Year: {props.record.Year} &nbsp; Color: {props.record.Color} &nbsp; Miles: {props.record.Miles} &nbsp; Miles Per Gallon: {props.record.MPG}</h4>
+                <h4>Engine: {props.record.Engine} &nbsp; Horsepower: {props.record.Horsepower} &nbsp; 0 - 60: {props.record.zeroToSixty}</h4>
+                <h4>Transmission: {props.record.Transmission} &nbsp; Top Speed: {props.record.TopSpeed}</h4>
             </div>
             <div className = "column right">
-                <h2>${carInventory[0].price}</h2>
+                <h2>{props.record.Price}</h2>
                 <button className = "button" onClick = {handleClick1}><img src = {buy_larger} alt ="buy now image1"/></button>
             </div>
         </div>
