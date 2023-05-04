@@ -78,7 +78,9 @@ export function Buy() {
     const Listing = (props) => (
         <div className = "row">
             <div className = "column left">
-                <img src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/e1-1674140223.jpeg" alt = "Car Buy Page" className = "buyPageImage"/>
+                <img src = {props.record.Image} alt = "Car Buy Page" className = "buyPageImage"/>
+                {console.log(typeof(props.record.Image))}
+                {console.log(props.record.Image)}
             </div>
             <div className = "column middle">
                 <h2>{props.record.Manufacturer} {props.record.Model}</h2>
