@@ -104,3 +104,42 @@ itemRoutes.route("/:id").delete((req, response) => {
 });
  
 module.exports = itemRoutes;
+
+//write to user_temp
+itemRoutes.route("/user_temp").post(function (req, res) {
+  let db_connect = dbo.getDb();
+  let myobj = {
+    user: req.body.username,
+    image: req.body.image,
+    manufacturer: req.body.manufacturer,
+    model: req.body.model
+  };
+  db_connect.collection("user_temp").insertOne(myobj, function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+//view user_temp
+itemRoutes.route("/user_temp").get(async function (req, res) {
+  let db_connect = dbo.getDb();
+  var result = await db_connect
+    .collection("user_temp")
+    .find({})
+    .toArray();
+  res.json(result);
+});
+
+//delete from user_temp
+// This section will help you delete a item
+itemRoutes.route("/:id").delete((req, response) => {
+  let db_connect = dbo.getDb();
+  let myquery = { _id: new ObjectId(req.params.id) };
+  db_connect.collection("cars").deleteOne(myquery, function (err, obj) {
+    if (err) throw err;
+    console.log("1 document deleted");
+    response.json(obj);
+  });
+ });
+
+
