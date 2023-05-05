@@ -60,14 +60,18 @@ export function MySavedCars() {
         });
     }
 
+    //MIDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
-    const [recordsR, setRecordsR] = useState([]);
- 
+    const [recordsr, setRecordsR] = useState([]);
+    
     // This method fetches the records from the database.
     useEffect(() => {
-       async function getRecordsR() {
+       async function getRecords() {
+        
        console.log("hey i ran");
-        const response = await fetch(`http://localhost:5000/item/rent/`);
+       console.log(`hello this is a test ${typeof(localStorage.getItem("user"))}`)
+       const currentUser = localStorage.getItem("user")
+        const response = await fetch(`http://localhost:5000/renting/?user=${currentUser}`);
         console.log("i got past the fetch");
         console.log(response);
         
@@ -77,19 +81,19 @@ export function MySavedCars() {
           return;
         }
     
-        const recordsR = await response.json();
-        console.log(recordsR)
-        setRecordsR(recordsR);
+        const recordsr = await response.json();
+        console.log(recordsr)
+        setRecordsR(recordsr);
       }
     
-      getRecordsR();
+      getRecords();
     
       return;
-    }, [recordsR.length]);
+    }, [recordsr.length]);
 
     // This method will map out the records on the table
     function recordListR() {
-        return recordsR.map((record) => {
+        return recordsr.map((record) => {
         return (
             <Rentals
             record={record}
@@ -114,10 +118,10 @@ export function MySavedCars() {
     const Rentals = (props) => (
         <div className = "row">
             <div className = "column buyA">
-                <img src = {props.record.Image} className = 'buyPageImage' alt = "your car image1"/>
+                <img src = {props.record.image} className = 'buyPageImage' alt = "your car image1"/>
             </div>
             <div className = "column buyB">
-                <h2>{props.record.Manufacturer} {props.record.Model}</h2>
+                <h2>{props.record.manufacturer} {props.record.model}</h2>
                 <button type = 'button' className = 'ud' onClick = ""> <img src={del} alt = "delete button"/></button>
             </div>
         </div>
