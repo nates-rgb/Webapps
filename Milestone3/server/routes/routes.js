@@ -15,7 +15,7 @@ const ObjectId = require("mongodb").ObjectId;
 // This section will help you get a list of all the cars.
 itemRoutes.route("/item/buy").get(async function (req, res) {
  let db_connect = dbo.getDb();
- console.log(db_connect);
+ //console.log(db_connect);
  var result = await db_connect
    .collection("buy")
    .find({}).toArray();
@@ -31,7 +31,7 @@ itemRoutes.route("/item/buy").get(async function (req, res) {
 // This section will help you get a list of all the cars.
 itemRoutes.route("/item/rent").get(async function (req, res) {
   let db_connect = dbo.getDb();
-  console.log(db_connect);
+  //console.log(db_connect);
   var result = await db_connect
     .collection("rent")
     .find({}).toArray();
@@ -106,7 +106,7 @@ itemRoutes.route("/:id").delete((req, response) => {
 module.exports = itemRoutes;
 
 //write to user_temp
-itemRoutes.route("/user_temp").post(function (req, res) {
+itemRoutes.route("/bought/add").post(function (req, res) {
   let db_connect = dbo.getDb();
   let myobj = {
     user: req.body.username,
@@ -114,18 +114,21 @@ itemRoutes.route("/user_temp").post(function (req, res) {
     manufacturer: req.body.manufacturer,
     model: req.body.model
   };
-  db_connect.collection("user_temp").insertOne(myobj, function (err, result) {
+  db_connect.collection("bought").insertOne(myobj, function (err, result) {
     if (err) throw err;
     res.json(result);
   });
 });
 
 //view user_temp
-itemRoutes.route("/user_temp").get(async function (req, res) {
+itemRoutes.route("/bought").get(async function (req, res) {
+  const user = req.query.user;
+  console.log(typeof(user))
+  console.log(user)
   let db_connect = dbo.getDb();
   var result = await db_connect
-    .collection("user_temp")
-    .find({})
+    .collection("bought")
+    .find({user:user})
     .toArray();
   res.json(result);
 });
