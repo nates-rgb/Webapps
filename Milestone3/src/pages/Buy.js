@@ -81,10 +81,7 @@ export function Buy() {
             console.error(error);
         }
         console.log(`Button ${recordId} was clicked`);
-        // You can replace console.log with your own code to record the button click
       }
-
-    //new
     
 
     const Listing = (props) => (

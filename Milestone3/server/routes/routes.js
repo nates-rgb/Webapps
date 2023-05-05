@@ -105,7 +105,7 @@ itemRoutes.route("/:id").delete((req, response) => {
  
 module.exports = itemRoutes;
 
-//write to user_temp
+//write to bought
 itemRoutes.route("/bought/add").post(function (req, res) {
   let db_connect = dbo.getDb();
   let myobj = {
@@ -120,7 +120,7 @@ itemRoutes.route("/bought/add").post(function (req, res) {
   });
 });
 
-//view user_temp
+//view bought
 itemRoutes.route("/bought").get(async function (req, res) {
   const user = req.query.user;
   console.log(typeof(user))
@@ -132,6 +132,35 @@ itemRoutes.route("/bought").get(async function (req, res) {
     .toArray();
   res.json(result);
 });
+
+//write to renting
+itemRoutes.route("/renting/add").post(function (req, res) {
+  let db_connect = dbo.getDb();
+  let myobj = {
+    user: req.body.username,
+    image: req.body.image,
+    manufacturer: req.body.manufacturer,
+    model: req.body.model
+  };
+  db_connect.collection("renting").insertOne(myobj, function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+//view renting
+itemRoutes.route("/renting").get(async function (req, res) {
+  const user = req.query.user;
+  console.log(typeof(user))
+  console.log(user)
+  let db_connect = dbo.getDb();
+  var result = await db_connect
+    .collection("renting")
+    .find({user:user})
+    .toArray();
+  res.json(result);
+});
+
 
 //delete from user_temp
 // This section will help you delete a item

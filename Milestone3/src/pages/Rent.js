@@ -3,9 +3,19 @@ import rent_larger from "../img/rentnowLarger.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-import { Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom"
+import {onAuthStateChanged} from "firebase/auth"
+import {auth} from "../firebase"
 
 export function Rent() {
+
+    const [curUser, setCurUser] = useState({})
+    
+
+    onAuthStateChanged(auth, (currentUser) => {
+        setCurUser(currentUser)
+    })
+    console.log(curUser.email)
 
     const [records, setRecords] = useState([]);
  
@@ -40,38 +50,38 @@ export function Rent() {
             <Listing
             record={record}
             key={record._id}
+            onButtonClick={() => handleButtonClick(record._id)}
             />
         );
         });
     }
 
-    //Car 1
-    const [rent1, rentStatus1] = useState(() => {
-        const storedRentStatus1 = localStorage.getItem('rent1');
-        return storedRentStatus1 !== null ? Number(storedRentStatus1) : 0;
-    });
-    const handleClickR1 = () => {
-        rentStatus1(rent1 + 1);
-        alert('Car Purchased!');
-        //window.location.reload();
-    }
-    
-
-    useEffect(() => {localStorage.setItem('rent1',rent1.toString());}, [rent1]);
-
-    //Car 2
-    const [rent2, rentStatus2] = useState(() => {
-        const storedRentStatus2 = localStorage.getItem('rent2');
-        return storedRentStatus2 !== null ? Number(storedRentStatus2) : 0;
-    });
-    const handleClickR2 = () => {
-        rentStatus2(rent2 + 1);
-        alert('Car Purchased!');
-        //window.location.reload();
-    }
-    
-
-    useEffect(() => {localStorage.setItem('rent2',rent2.toString());}, [rent2]);
+    async function handleButtonClick(recordId) {
+        console.log(`Button ${recordId} was clicked`);
+        const record = records.find((r) => r._id === recordId);
+        try {
+            const response = await fetch(`http://localhost:5000/renting/add`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                username: curUser.email,
+                image: record.Image,
+                manufacturer: record.Manufacturer,
+                model: record.Model
+            })
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            console.log("Data received:", data);
+        } catch (error) {
+            console.error(error);
+        }
+        console.log(`Button ${recordId} was clicked`);
+      }
 
     const Listing = (props) => (
         <div className = "row">
@@ -86,7 +96,7 @@ export function Rent() {
             </div>
             <div className = "column right">
                 <h2>{props.record.Price} Per Day</h2>
-                <button className = "button" onClick = {handleClickR1}><img src = {rent_larger} alt ="buy now image1"/></button>
+                <button className = "button" onClick = {props.onButtonClick}><img src = {rent_larger} alt ="buy now image1"/></button>
             </div>
         </div>
     );

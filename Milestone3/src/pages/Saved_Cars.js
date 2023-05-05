@@ -7,7 +7,6 @@ import del from "../img/delete.png"
 import {Header} from "./universalComponets/Header"
 import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
-import {carInventory} from './dB'
 import { Navigate } from "react-router-dom";
 import {onAuthStateChanged} from "firebase/auth"
 import {auth} from "../firebase"
