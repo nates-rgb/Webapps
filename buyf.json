@@ -1,0 +1,171 @@
+[{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbeb"
+  },
+  "Manufacturer": "Ferrari",
+  "Model": "F40",
+  "Color": "Red",
+  "Year": 1987,
+  "Engine": "2.9L Twin-Turbo V8",
+  "Horsepower": "471 HP",
+  "TopSpeed": "229 MPH",
+  "zeroToSixty": "3.1 seconds",
+  "Price": "$1,500,000",
+  "MPG": "11",
+  "Transmission": "5 Speed Automatic",
+  "Miles": 8563,
+  "Image": "ferrarif40.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbec"
+  },
+  "Manufacturer": "Aston Martin",
+  "Model": "Valhalla",
+  "Color": "Light Blue",
+  "Year": 2023,
+  "Engine": "4.0L Twin-Turbo V8",
+  "Horsepower": "740 HP",
+  "TopSpeed": "217 MPH",
+  "zeroToSixty": "2.5 seconds",
+  "Price": "$850,000",
+  "MPG": "15",
+  "Transmission": "8 Speed Automatic",
+  "Miles": 0,
+  "Image": "astonmartinvalhalla.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbed"
+  },
+  "Manufacturer": "Chevrolet",
+  "Model": "Corvette Z06",
+  "Color": "Red",
+  "Year": 2023,
+  "Engine": "5.5L V8",
+  "Horsepower": "670 HP",
+  "TopSpeed": "189 MPH",
+  "zeroToSixty": "2.6 seconds",
+  "Price": "$109,295",
+  "MPG": "12",
+  "Transmission": "8 Speed Automatic",
+  "Miles": 0,
+  "Image": "corvettez06.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbee"
+  },
+  "Manufacturer": "Lamborghini",
+  "Model": "Aventador",
+  "Color": "Light Grey",
+  "Year": 2022,
+  "Engine": "6.5L V12",
+  "Horsepower": "769 HP",
+  "TopSpeed": "215 MPH",
+  "zeroToSixty": "2.8 seconds",
+  "Price": "$500,000",
+  "MPG": "9",
+  "Transmission": "7 Speed Automatic",
+  "Miles": 0,
+  "Image": "lamborghiniaventador.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbef"
+  },
+  "Manufacturer": "McLaren",
+  "Model": "765LT Spider",
+  "Color": "Blue",
+  "Year": 2022,
+  "Engine": "4.0L Twin-Turbo V8",
+  "Horsepower": "755 HP",
+  "TopSpeed": "205 MPH",
+  "zeroToSixty": "2.7 seconds",
+  "Price": "$382,500",
+  "MPG": "15",
+  "Transmission": "7-speed dual-clutch automatic",
+  "Miles": 0,
+  "Image": "mclaren765ltspyder.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbf0"
+  },
+  "Manufacturer": "Bugatti",
+  "Model": "Chiron",
+  "Color": "Blue",
+  "Year": 2022,
+  "Engine": "8.0L quad-turbocharged W16",
+  "Horsepower": "1479 HP",
+  "TopSpeed": "261 MPH",
+  "zeroToSixty": "2.4 seconds",
+  "Price": "$3,000,000",
+  "MPG": "10",
+  "Transmission": "7-speed dual-clutch automatic",
+  "Miles": 0,
+  "Image": "bugattichiron.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbf1"
+  },
+  "Manufacturer": "Ferrari",
+  "Model": "296 GTB",
+  "Color": "Rosso Corsa (Red)",
+  "Year": 2022,
+  "Engine": "2.9L V6 Turbo Hybrid",
+  "Horsepower": "818 HP",
+  "TopSpeed": "205 MPH",
+  "zeroToSixty": "2.9 seconds",
+  "Price": "$321,400",
+  "MPG": "22",
+  "Transmission": "8-speed dual-clutch automatic",
+  "Miles": 0,
+  "Image": "ferrari296gtb.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbf2"
+  },
+  "Manufacturer": "Pagani",
+  "Model": "Huayra",
+  "Color": "Black",
+  "Year": 2020,
+  "Engine": "6.0L twin-turbo V12",
+  "Horsepower": "827 HP",
+  "TopSpeed": "238.6 MPH",
+  "zeroToSixty": "2.8 seconds",
+  "Price": "$3,000,000",
+  "MPG": "12",
+  "Transmission": "7-speed automated manual",
+  "Miles": 0,
+  "Image": "paganihuayra.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbf3"
+  },
+  "Manufacturer": "Lamborghini",
+  "Model": "Revuelto",
+  "Color": "Orange",
+  "Year": 2024,
+  "Engine": "6.5L V12 with 3 Electric Motors",
+  "Horsepower": "814 HP",
+  "TopSpeed": "217 MPH",
+  "zeroToSixty": "2.5 Seconds",
+  "Price": "$2,500,000",
+  "MPG": "N/A",
+  "Transmission": "8 Speed Dual Clutch Automatic",
+  "Miles": 0,
+  "Image": "lamborghinirevuelto.jpg"
+},{
+  "_id": {
+    "$oid": "645337f9ea50039c441cbbf4"
+  },
+  "Manufacturer": "Ferrari",
+  "Model": "Enzo Ferrari",
+  "Color": "Red",
+  "Year": 2003,
+  "Engine": "6.0L Tipo F140B V12",
+  "Horsepower": "660 HP",
+  "TopSpeed": "218 mph (351 km/h)",
+  "zeroToSixty": "3.1 seconds",
+  "Price": "$4,000,000",
+  "MPG": "7",
+  "Transmission": "6-speed automatic",
+  "Miles": 5690,
+  "Image": "ferrarienzoferrari.jpg"
+}]
