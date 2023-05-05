@@ -185,4 +185,20 @@ itemRoutes.route("/renting/:id").delete((req, response) => {
   });
  });
 
+ itemRoutes.route("/item/appointments").post(function (req, response) {
+  let db_connect = dbo.getDb();
+  let myobj = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    VIN: req.body.VIN,
+    lastService: req.body.lastService,
+    appointmentDate:req.body.appointmentDate,
+    message:req.body.message
+  };
+  db_connect.collection("appointments").insertOne(myobj, function (err, res) {
+    if (err) throw err;
+    response.json(res);
+  });
+ });
+
 

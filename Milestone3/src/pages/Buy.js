@@ -10,13 +10,7 @@ import {auth} from "../firebase"
 
 export function Buy() {
 
-    const [curUser, setCurUser] = useState({})
     
-
-    onAuthStateChanged(auth, (currentUser) => {
-        setCurUser(currentUser)
-    })
-    console.log(curUser.email)
     const [records, setRecords] = useState([]);
  
     // This method fetches the records from the database.
@@ -66,7 +60,7 @@ export function Buy() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                username: curUser.email,
+                username: localStorage.getItem("user"),
                 image: record.Image,
                 manufacturer: record.Manufacturer,
                 model: record.Model
