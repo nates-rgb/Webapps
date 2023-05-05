@@ -29,6 +29,7 @@ export function NewAccount() {
         try{
          await createUserWithEmailAndPassword(auth, newEmail, newPass).then(()=>{
             localStorage.setItem("Authenticated", true)
+            
             window.location.reload(false);
          })
         
@@ -36,7 +37,8 @@ export function NewAccount() {
        
         console.log(newUser)
         await updateProfile(auth.currentUser, {
-            displayName: name}).then(localStorage.setItem("user", name))
+            displayName: name})
+            
         
         } catch (error){
             console.log(error.message);
@@ -69,7 +71,8 @@ export function NewAccount() {
             </tr>
             <tr>
             <td><label htmlFor="email">Email</label></td>
-            <td><input type="text" id="uname" placeholder="Your Email" onChange={(event)=>{setNewEmail(event.target.value)}} required/></td>
+            <td><input type="text" id="uname" placeholder="Your Email" onChange={(event)=>{setNewEmail(event.target.value)
+            localStorage.setItem("user", event.target.value)}} required/></td>
             </tr>
             <tr>
                 <td><label htmlFor="pwd"><img src={pass} alt="password"/></label></td>

@@ -9,15 +9,27 @@ import {Nav} from "./universalComponets/Nav"
 import {Footer} from "./universalComponets/Footer"
 import {carInventory} from './dB'
 import { Navigate } from "react-router-dom";
+import {onAuthStateChanged} from "firebase/auth"
+import {auth} from "../firebase"
 
 export function MySavedCars() {
+    const [curUser, setCurUser] = useState({})
+    
+
+    onAuthStateChanged(auth, (currentUser) => {
+        setCurUser(currentUser)
+    })
+    console.log(curUser.email)
     const [records, setRecords] = useState([]);
- 
+    
     // This method fetches the records from the database.
     useEffect(() => {
        async function getRecords() {
+        
        console.log("hey i ran");
-        const response = await fetch(`http://localhost:5000/user_temp/`);
+       console.log(`hello this is a test ${typeof(localStorage.getItem("user"))}`)
+       const currentUser = localStorage.getItem("user")
+        const response = await fetch(`http://localhost:5000/bought/?user=${currentUser}`);
         console.log("i got past the fetch");
         console.log(response);
         

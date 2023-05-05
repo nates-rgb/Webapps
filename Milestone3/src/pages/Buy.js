@@ -16,7 +16,7 @@ export function Buy() {
     onAuthStateChanged(auth, (currentUser) => {
         setCurUser(currentUser)
     })
-
+    console.log(curUser.email)
     const [records, setRecords] = useState([]);
  
     // This method fetches the records from the database.
@@ -60,7 +60,7 @@ export function Buy() {
         console.log(`Button ${recordId} was clicked`);
         const record = records.find((r) => r._id === recordId);
         try {
-            const response = await fetch(`http://localhost:5000/user_temp`, {
+            const response = await fetch(`http://localhost:5000/bought/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
