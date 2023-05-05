@@ -12,6 +12,19 @@ import {onAuthStateChanged} from "firebase/auth"
 import {auth} from "../firebase"
 
 export function MySavedCars() {
+
+     function deleteBought(id) {
+         fetch(`http://localhost:5000/bought/${id}`, {
+          method: "DELETE"
+        });
+        window.location.reload();}
+     function deleteRenting(id) {
+         fetch(`http://localhost:5000/renting/${id}`, {
+            method: "DELETE"
+        });
+        window.location.reload();}        
+
+
     const [curUser, setCurUser] = useState({})
     
 
@@ -53,7 +66,10 @@ export function MySavedCars() {
         return records.map((record) => {
         return (
             <Listing
+           
             record={record}
+            deleteBought={() => deleteBought(record._id)}
+            
             key={record._id}
             />
         );
@@ -97,12 +113,14 @@ export function MySavedCars() {
         return (
             <Rentals
             record={record}
+            deleteRenting={() => deleteRenting(record._id)}
             key={record._id}
             />
         );
         });
     }
-
+    // This method will delete a record
+ 
     const Listing = (props) => (
                         <div className = "row">
                             <div className = "column buyA">
@@ -110,7 +128,7 @@ export function MySavedCars() {
                             </div>
                             <div className = "column buyB">
                                 <h2>{props.record.manufacturer} {props.record.model}</h2>
-                                <button type = 'button' className = 'ud' onClick = ""> <img src={del} alt = "delete button"/></button>
+                                <button type = 'button' className = 'ud' onClick={() => {props.deleteBought(props.record._id);}}> <img src={del} alt = "delete button"/></button>
                             </div>
                         </div>
     );
@@ -122,7 +140,7 @@ export function MySavedCars() {
             </div>
             <div className = "column buyB">
                 <h2>{props.record.manufacturer} {props.record.model}</h2>
-                <button type = 'button' className = 'ud' onClick = ""> <img src={del} alt = "delete button"/></button>
+                <button type = 'button' className = 'ud' onClick={() => {props.deleteRenting(props.record._id);}}> <img src={del} alt = "delete button"/></button>
             </div>
         </div>
 );
