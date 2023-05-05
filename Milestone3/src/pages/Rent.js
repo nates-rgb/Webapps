@@ -107,5 +107,5 @@ export function Rent() {
    
     )
         }
-        return(<><Navigate replace to="/" /></>)
+        return(<><Navigate replace to="/Login" /></>)
 }

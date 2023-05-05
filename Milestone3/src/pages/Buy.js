@@ -108,5 +108,5 @@ export function Buy() {
         </div>       
     )
     }
-    return(<><Navigate replace to="/" /></>)
+    return(<><Navigate replace to="/Login" /></>)
 }
