@@ -92,16 +92,16 @@ itemRoutes.route("/update/:id").post(function (req, response) {
    });
 });
  
-// This section will help you delete a item
-itemRoutes.route("/:id").delete((req, response) => {
- let db_connect = dbo.getDb();
- let myquery = { _id: new ObjectId(req.params.id) };
- db_connect.collection("cars").deleteOne(myquery, function (err, obj) {
-   if (err) throw err;
-   console.log("1 document deleted");
-   response.json(obj);
- });
-});
+// // This section will help you delete a item
+// itemRoutes.route("/:id").delete((req, response) => {
+//  let db_connect = dbo.getDb();
+//  let myquery = { _id: new ObjectId(req.params.id) };
+//  db_connect.collection("cars").deleteOne(myquery, function (err, obj) {
+//    if (err) throw err;
+//    console.log("1 document deleted");
+//    response.json(obj);
+//  });
+// });
  
 module.exports = itemRoutes;
 
@@ -164,10 +164,21 @@ itemRoutes.route("/renting").get(async function (req, res) {
 
 //delete from user_temp
 // This section will help you delete a item
-itemRoutes.route("/:id").delete((req, response) => {
+itemRoutes.route("/bought/:id").delete((req, response) => {
   let db_connect = dbo.getDb();
   let myquery = { _id: new ObjectId(req.params.id) };
-  db_connect.collection("cars").deleteOne(myquery, function (err, obj) {
+  db_connect.collection("bought").deleteOne(myquery, function (err, obj) {
+    if (err) throw err;
+    console.log("1 document deleted");
+    response.json(obj);
+  });
+ });
+
+ // This section will help you delete a item
+itemRoutes.route("/renting/:id").delete((req, response) => {
+  let db_connect = dbo.getDb();
+  let myquery = { _id: new ObjectId(req.params.id) };
+  db_connect.collection("renting").deleteOne(myquery, function (err, obj) {
     if (err) throw err;
     console.log("1 document deleted");
     response.json(obj);
